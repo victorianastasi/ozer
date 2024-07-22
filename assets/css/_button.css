@@ -1,0 +1,31 @@
+.btn.btn-primary, .btn.btn-outline-primary, .btn.btn-outline-success, .btn.btn-success {
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+}
+.btn.btn-primary {
+    background-color: var(--btn-primary-color);
+    outline-color: var(--btn-primary-color);
+}
+.btn.btn-outline-primary {
+    color: var(--btn-primary-color);
+    outline-color: var(--btn-primary-color);
+}
+.btn.btn-primary:hover, .btn.btn-outline-primary:hover {
+    background-color: var(--btn-primary-color-hover);
+    color: var(--white);
+    outline-color: var(--btn-primary-color-hover);
+}
+
+.btn.btn-outline-secondary {
+    outline-color: #6c757d;
+}
+
+.btn.btn-success {
+    background-color: var(--success-bg-color);
+    outline-color: var(--success-bg-color);
+}
+.btn.btn-outline-success {
+    color: var(--success-bg-color);
+    outline-color: var(--success-bg-color);
+}
