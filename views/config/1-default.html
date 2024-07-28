@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ozer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="../../assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../../img/logo.svg" alt="Ozer.bot" />
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader" aria-label="Menú">
+          <span class="material-symbols-outlined" aria-hidden="true">
+            menu
+          </span>
+        </button>
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasHeader"
+          aria-labelledby="offcanvasHeaderLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasHeader"
+              aria-label="Cerrar">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="offcanvas-container-top">
+              <a href="#" class="offcanvas-link d-lg-none">
+                <div class="offcanvas-link__text">
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    help
+                  </span>
+                  <span>Ayuda</span>
+                </div>
+                <span class="material-symbols-outlined d-lg-none" aria-hidden="true">
+                  chevron_right
+                </span>
+              </a>
+              <hr />
+              <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="offcanvas-link__text">
+                    <span class="material-symbols-outlined d-lg-none" aria-hidden="true">
+                      language
+                    </span>
+                    <span>Español</span>
+                  </div>
+                  <span class="material-symbols-outlined btn-dropdown-icon" aria-hidden="true">
+                    expand_more
+                  </span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item">English</button></li>
+                  <li><button class="dropdown-item">Deutsch</button></li>
+                </ul>
+              </div>
+              <!-- header en config-->
+              <div>
+                <a class="navbar-brand" href="">Comandos
+                  <span class="material-symbols-outlined">
+                    keyboard_command_key
+                  </span>
+                </a>
+                <a class="navbar-brand" href="">Ayuda
+                  <span class="material-symbols-outlined">help</span>
+                </a>
+              </div> 
+              <!-- header en config-->
+            </div>
+            <div class="offcanvas-container-bottom">
+              <button class="offcanvas-logout" aria-label="Cerrar sesión">
+                <span class="d-lg-none">Cerrar sesión</span>
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  logout
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="container">
+      <div class="row install-section">
+        <div class="col-12 col-lg-6 install-section__item">
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span class="material-symbols-outlined">
+                  settings
+                  </span>
+                  Configuración general</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">
+                person
+              </span>
+              Configuración de contactos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">
+                  groups
+                </span>
+                Configuración de grupos</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-12 col-lg-6 install-section__item">
+          <h4>Configuración general</h4>
+          <p>Modo de transcripción para contactos</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Transcribir en el mismo chat
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Transcribir en mi chat privado
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault3">
+              No transcribir
+            </label>
+          </div>
+
+
+          <p>Mensajes de voz salientes</p>
+          <span>Al habilitar esta configuración, también se transcribirán los mensajes de voz que envíes a tus contactos</span>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+
+        </div>          
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

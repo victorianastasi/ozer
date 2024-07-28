@@ -29,3 +29,31 @@
     color: var(--success-bg-color);
     outline-color: var(--success-bg-color);
 }
+
+/* check button */
+.form-check-input:checked {
+    box-shadow: inset 0 0 0 4px #fff;
+    background-color: var(--btn-primary-color);
+    border-color: var(--btn-primary-color);
+}
+
+.form-check-input:checked[type=radio] {
+    --bs-form-check-bg-image: none;
+}
+
+.form-check-input {
+    width: 24px;
+    height: 24px;
+}
+
+.form-check-label {
+    padding: .25rem;
+    padding-left: .5rem;
+    padding-right: .75rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+}
+
+/* .form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: none;
+} */
