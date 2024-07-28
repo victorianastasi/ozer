@@ -1,6 +1,7 @@
 .navbar {
   padding: 1.5rem 0;
   background-color: var(--bs-body-bg);
+  font-size: var(--font-size-body-1);
 }
 .navbar .container {
   padding-left: 1rem;
@@ -44,7 +45,7 @@
 @media screen and (min-width: 992px) {
   .navbar .offcanvas-body {
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
 }
 .navbar .offcanvas-body .offcanvas-container-top {
@@ -56,11 +57,11 @@
   .navbar .offcanvas-body .offcanvas-container-top {
     background-color: transparent;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 .navbar .offcanvas-body .offcanvas-container-top hr {
@@ -90,6 +91,11 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: 0.25rem;
+}
+@media screen and (min-width: 992px) {
+  .navbar .offcanvas-body .offcanvas-container-top .offcanvas-link__text {
+    flex-direction: row-reverse;
+  }
 }
 .navbar .offcanvas-body .offcanvas-container-top .dropdown-toggle {
   border: none;

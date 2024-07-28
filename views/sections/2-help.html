@@ -62,7 +62,22 @@
             </div>
             <div class="offcanvas-body">
               <div class="offcanvas-container-top">
-                <a href="#" class="offcanvas-link d-lg-none">
+                <a href="#" class="offcanvas-link">
+                  <div class="offcanvas-link__text">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      keyboard_command_key
+                    </span>
+                    <span>Comandos</span>
+                  </div>
+                  <span
+                    class="material-symbols-outlined d-lg-none"
+                    aria-hidden="true"
+                  >
+                    chevron_right
+                  </span>
+                </a>
+                <hr />
+                <a href="#" class="offcanvas-link">
                   <div class="offcanvas-link__text">
                     <span class="material-symbols-outlined" aria-hidden="true">
                       help
@@ -119,63 +134,64 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="container">
-        <h1 class="my-4 h3">Instalación de Ozer en WhatsApp</h1>
+    <main class="main-container">
+      <section class="container my-4">
+        <a
+          href="#"
+          class="d-flex align-items-center gap-1 text-decoration-none mb-2"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">
+            arrow_back
+          </span>
+          <span>Volver a la configuración</span>
+        </a>
+        <h1 class="mb-0 h4">Ayuda</h1>
       </section>
 
       <section class="container">
         <div class="row install-section">
-          <div class="col-12 col-lg-6 install-section__item">
-            <div class="section-qr">
-              <img src="../../img/qr_code.svg" alt="Código QR" />
-            </div>
-            <div class="section-authcode">
-              <form action="">
-                <div>
-                  <label class="mb-2 d-block" for="authcode"
-                    >Código de autenticación</label
-                  >
-                  <input
-                    type="text"
-                    id="authcode"
-                    name="authcode"
-                    placeholder="XXXX-XXXX"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 install-section__item">
+          <div class="col-12 col-lg-8 install-section__item">
             <div class="nav-sections mb-4">
-              <img src="../../img/android-51.svg" alt="Android" />
-              <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
-                <li>Abrir WhatsApp</li>
-                <li>Pulsar en : (3 puntitos)</li>
-                <li>Dispositivos vinculados</li>
-                <li>Vincular dispositivo</li>
-                <li class="d-lg-none">Vincular con el número de teléfono</li>
-                <li class="d-lg-none">
-                  Insertar el código que aparece al inicio de esta pantalla
-                </li>
-                <li class="item-mobile">Apuntar la cámara al código QR</li>
-              </ol>
-            </div>
-            <div class="nav-sections">
-              <img src="../../img/iOS.svg" alt="iOS" />
-              <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
-                <li>Abrir WhatsApp</li>
-                <li>Pulsar en : (3 puntitos)</li>
-                <li>Dispositivos vinculados</li>
-                <li>Vincular dispositivo</li>
-                <li class="d-lg-none">Vincular con el número de teléfono</li>
-                <li class="d-lg-none">
-                  Insertar el código que aparece al inicio de esta pantalla
-                </li>
-                <li class="item-mobile">Apuntar la cámara al código QR</li>
-              </ol>
+              <h2 class="mb-0 h5">Tips</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="h6 mb-2">Configuración general</p>
+              <p class="text-secondary mb-0">
+                Ozer puede transcribir los mensajes de audio de contactos y
+                grupos. En la <a href="#">configuración general</a> se puede
+                elegir si se transcriben en el mismo chat o en un chat privado.
+              </p>
+              <hr class="nav-sections__divisor" />
+              <p class="h6 mb-2">Configuración de contactos y grupos</p>
+              <p class="text-secondary mb-1">
+                La forma de recibir las transcripciones se puede cambiar
+                individualmente por cada contacto y cada grupo.
+              </p>
+              <p class="mb-0">
+                <a
+                  href="#"
+                  class="mb-1 d-flex align-items-center gap-1 text-decoration-none"
+                >
+                  <span class="text-decoration-underline"
+                    >Configuración de contactos</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    arrow_forward
+                  </span>
+                </a>
+              </p>
+              <p class="mb-0">
+                <a
+                  href="#"
+                  class="d-flex align-items-center gap-1 text-decoration-none"
+                >
+                  <span class="text-decoration-underline"
+                    >Configuración de grupos</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    arrow_forward
+                  </span>
+                </a>
+              </p>
             </div>
           </div>
         </div>

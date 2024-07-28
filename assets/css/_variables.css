@@ -5,12 +5,13 @@
     --btn-primary-color-hover: #142A79;
     --text-link-color: #3754BD;
     --text-link-color-hover: #233D9B;
+    --bs-body-color: #1E2024;
     --text-main-color: #1E2024;
     --text-secondary-color: #464951;
     --border-primary-color: #DCDDE0;
 
     --success-bg-color: #408559;
-    --success-secondary-bg-color: #183524; /* revisar, no coincide el color */
+    --success-secondary-bg-color: #D6E6DE;
     --success-border-color: #ACCEBC;
     --success-text-color: #183524;
     
@@ -28,5 +29,15 @@
     --info-secondary-bg-color: #D6F3FB;
     --info-border-color: #AEE8F7;
     --info-text-color: #21505E;
+
+    --font-family: "Exo 2", sans-serif, var(--bs-body-font-family);
+
+    --font-size-body-1: 16px;
+    --font-size-body-2: 14px;
+    --font-size-body-3: 12px;
+
+    --line-height-body-1: 19.2px;
+    --line-height-body-2: 16.8px;
+    --line-height-body-3: 14.4px;
 
   }

@@ -1,3 +1,7 @@
+.btn {
+    font-size: var(--font-size-body-1);
+    line-height: var(--line-height-body-1);
+}
 .btn.btn-primary, .btn.btn-outline-primary, .btn.btn-outline-success, .btn.btn-success {
     border: none;
     outline: 2px solid transparent;
