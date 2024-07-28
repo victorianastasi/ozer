@@ -1,0 +1,13 @@
+.ul-list-ozer {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.ul-list-ozer li:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.li-list-ozer {
+    display: flex;
+}
