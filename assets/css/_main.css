@@ -39,6 +39,11 @@ body {
   width: 20px;
   height: 20px;
 }
+.size-32 {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
 .border-none {
   border: none;
 }

@@ -1,0 +1,23 @@
+.contacts-container {
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .contacts-container {
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+  }
+  .contacts-subtitle {
+    max-width: 400px;
+  }
+}
+
+.offcanvas-contacts {
+  background-color: var(--white);
+}
+@media (min-width: 992px) {
+  .offcanvas.offcanvas-end.offcanvas-contacts {
+    width: 768px;
+  }
+}
