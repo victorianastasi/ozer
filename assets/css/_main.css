@@ -28,6 +28,10 @@ body {
   .w-lg-max {
     width: max-content !important;
   }
+  .padding-x-lg-none {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .size-20 {

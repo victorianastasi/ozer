@@ -61,66 +61,79 @@
               </button>
             </div>
             <div class="offcanvas-body">
-              <div class="offcanvas-container-top">
-                <a href="#" class="offcanvas-link">
-                  <div class="offcanvas-link__text">
-                    <span class="material-symbols-outlined" aria-hidden="true">
-                      keyboard_command_key
-                    </span>
-                    <span>Comandos</span>
-                  </div>
-                  <span
-                    class="material-symbols-outlined d-lg-none"
-                    aria-hidden="true"
-                  >
-                    chevron_right
-                  </span>
-                </a>
-                <hr />
-                <a href="#" class="offcanvas-link">
-                  <div class="offcanvas-link__text">
-                    <span class="material-symbols-outlined" aria-hidden="true">
-                      help
-                    </span>
-                    <span>Ayuda</span>
-                  </div>
-                  <span
-                    class="material-symbols-outlined d-lg-none"
-                    aria-hidden="true"
-                  >
-                    chevron_right
-                  </span>
-                </a>
-                <hr />
-                <div class="dropdown">
-                  <button
-                    type="button"
-                    class="btn dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
+              <div>
+                <div class="user-data d-lg-none">
+                  <p class="mb-2 h4">Ariel</p>
+                  <p class="mb-0 text-secondary">+346647384</p>
+                </div>
+                <div class="offcanvas-container-top">
+                  <a href="#" class="offcanvas-link">
                     <div class="offcanvas-link__text">
                       <span
-                        class="material-symbols-outlined d-lg-none"
+                        class="material-symbols-outlined"
                         aria-hidden="true"
                       >
-                        language
+                        keyboard_command_key
                       </span>
-                      <span>Español</span>
+                      <span>Comandos</span>
                     </div>
                     <span
-                      class="material-symbols-outlined btn-dropdown-icon"
+                      class="material-symbols-outlined d-lg-none"
                       aria-hidden="true"
                     >
-                      expand_more
+                      chevron_right
                     </span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><button class="dropdown-item">English</button></li>
-                    <li><button class="dropdown-item">Deutsch</button></li>
-                  </ul>
+                  </a>
+                  <hr />
+                  <a href="#" class="offcanvas-link">
+                    <div class="offcanvas-link__text">
+                      <span
+                        class="material-symbols-outlined"
+                        aria-hidden="true"
+                      >
+                        help
+                      </span>
+                      <span>Ayuda</span>
+                    </div>
+                    <span
+                      class="material-symbols-outlined d-lg-none"
+                      aria-hidden="true"
+                    >
+                      chevron_right
+                    </span>
+                  </a>
+                  <hr />
+                  <div class="dropdown">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <div class="offcanvas-link__text">
+                        <span
+                          class="material-symbols-outlined d-lg-none"
+                          aria-hidden="true"
+                        >
+                          language
+                        </span>
+                        <span>Español</span>
+                      </div>
+                      <span
+                        class="material-symbols-outlined btn-dropdown-icon"
+                        aria-hidden="true"
+                      >
+                        expand_more
+                      </span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item">English</button></li>
+                      <li><button class="dropdown-item">Deutsch</button></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+
               <div class="offcanvas-container-bottom">
                 <button class="offcanvas-logout" aria-label="Cerrar sesión">
                   <span class="d-lg-none">Cerrar sesión</span>
@@ -152,10 +165,11 @@
         <div class="row install-section">
           <!-- Navegacion vertical -->
           <div class="col-12 col-lg-4 install-section__item">
-            <div class="user-data">
-
+            <div class="user-data d-none d-lg-block">
+              <p class="mb-2 h4">Ariel</p>
+              <p class="mb-0 text-secondary">+346647384</p>
             </div>
-            <nav class="container mb-4">
+            <nav class="container padding-x-lg-none mb-4">
               <ul class="nav nav-custom">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">
@@ -201,20 +215,9 @@
                 </li>
               </ul>
             </nav>
-            <!-- <div class="nav-sections mb-4">
-              <h2 class="mb-0 h5">Activar transcripciones</h2>
-              <hr class="nav-sections__divisor custom-margin" />
-              <p class="mb-3">
-                Se han pausado todas las transcripciones. Actívalas si quieres
-                volver a recibirlas en tus chats
-              </p>
-              <button class="btn btn-lg btn-outline-primary">
-                Activar transcripciones
-              </button>
-            </div> -->
           </div>
           <!-- Navegacion vertical Fin -->
-          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+          <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="nav-sections pb-0 rounded-0 rounded-lg-4">
               <h1 class="mb-3 h4">Configuración general</h1>
               <!-- Alerta -->
@@ -231,10 +234,16 @@
                 <div class="d-lg-flex justify-content-between gap-2">
                   <p class="text-danger body-2 mb-lg-0 mt-sm-1 mt-lg-0">
                     <span>Se han pausado todas las transcripciones. </span>
-                    <span class="d-lg-block">Actívalas si quieres volver a recibirlas en tus chats</span>
+                    <span class="d-lg-block"
+                      >Actívalas si quieres volver a recibirlas en tus
+                      chats</span
+                    >
                   </p>
                   <div>
-                    <button type="button" class="btn btn-outline-primary w-lg-max p-2">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary w-lg-max p-2"
+                    >
                       <span class="body-2">Activar transcripciones</span>
                     </button>
                   </div>
@@ -242,7 +251,8 @@
               </div>
               <!-- Alerta Fin-->
               <hr class="nav-sections__divisor custom-margin" />
-              <form class="body-2 mb-4">
+              <!-- Formulario - Radio -->
+              <form class="body-2">
                 <p class="fw-bold mb-2">Modo de transcripción para contactos</p>
                 <div class="form-check">
                   <input
@@ -316,11 +326,11 @@
                   </label>
                 </div>
                 <p class="fw-bold mb-2 mt-4">Mensajes de voz salientes</p>
-                <p class="mb-0 body-3 text-secondary">
+                <p class="mb-1 body-3 text-secondary">
                   Al habilitar esta configuración, también se transcribirán los
                   mensajes de voz que envíes a tus contactos
                 </p>
-                <div class="py-3 d-flex">
+                <div class="py-3 d-flex box-btn-mobile">
                   <button
                     type="button"
                     class="btn btn-primary btn-lg w-100 w-lg-auto ms-lg-auto"
@@ -329,6 +339,7 @@
                   </button>
                 </div>
               </form>
+               <!-- Formulario - Radio Fin-->
             </div>
           </div>
         </div>
