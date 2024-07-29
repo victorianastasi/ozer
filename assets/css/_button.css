@@ -83,14 +83,27 @@
 .form-check-input {
   width: 24px;
   height: 24px;
+  background-color: var(--white);
+  border: 2px solid var(--btn-primary-color);
+  margin: 0;
 }
 
 .form-check-label {
   padding: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   border-radius: 0.5rem;
+  padding: 0;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.form-check:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 /* .form-check-input:checked[type=checkbox] {

@@ -2,7 +2,9 @@
 @import '_typography.css';
 @import '_main.css';
 @import '_button.css';
+@import '_alert.css';
 @import '_header.css';
 @import '_install.css';
 @import '_install-success.css';
 @import '_sections.css';
+@import '_config.css';

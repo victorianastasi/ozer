@@ -1,6 +1,12 @@
 .text-secondary {
   color: var(--text-secondary-color) !important;
 }
+.text-danger {
+  color: var(--danger-text-color) !important;
+}
+.text-info {
+  color: var(--info-bg-color) !important;
+}
 /* Enlace */
 a {
   color: var(--text-link-color);
