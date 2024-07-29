@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="../../img/logo.svg" alt="Ozer.bot" />
+          </a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasHeader"
+            aria-controls="offcanvasHeader"
+            aria-label="Menú"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              menu
+            </span>
+          </button>
+          <div
+            class="offcanvas-lg offcanvas-end"
+            tabindex="-1"
+            id="offcanvasHeader"
+            aria-labelledby="offcanvasHeaderLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#offcanvasHeader"
+                aria-label="Cerrar"
+              >
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  close
+                </span>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="offcanvas-container-top">
+                <a href="#" class="offcanvas-link">
+                  <div class="offcanvas-link__text">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      keyboard_command_key
+                    </span>
+                    <span>Comandos</span>
+                  </div>
+                  <span
+                    class="material-symbols-outlined d-lg-none"
+                    aria-hidden="true"
+                  >
+                    chevron_right
+                  </span>
+                </a>
+                <hr />
+                <a href="#" class="offcanvas-link">
+                  <div class="offcanvas-link__text">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      help
+                    </span>
+                    <span>Ayuda</span>
+                  </div>
+                  <span
+                    class="material-symbols-outlined d-lg-none"
+                    aria-hidden="true"
+                  >
+                    chevron_right
+                  </span>
+                </a>
+                <hr />
+                <div class="dropdown">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="offcanvas-link__text">
+                      <span
+                        class="material-symbols-outlined d-lg-none"
+                        aria-hidden="true"
+                      >
+                        language
+                      </span>
+                      <span>Español</span>
+                    </div>
+                    <span
+                      class="material-symbols-outlined btn-dropdown-icon"
+                      aria-hidden="true"
+                    >
+                      expand_more
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item">English</button></li>
+                    <li><button class="dropdown-item">Deutsch</button></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="offcanvas-container-bottom">
+                <button class="offcanvas-logout" aria-label="Cerrar sesión">
+                  <span class="d-lg-none">Cerrar sesión</span>
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    logout
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-container">
+      <section class="container my-4">
+        <a
+          href="#"
+          class="d-flex align-items-center gap-1 text-decoration-none mb-2"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">
+            arrow_back
+          </span>
+          <span>Volver a la configuración</span>
+        </a>
+        <h1 class="mb-0 h4">Ayuda</h1>
+      </section>
+
+      <section class="container">
+        <div class="row install-section">
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Tips</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="h6 mb-2">Configuración general</p>
+              <p class="text-secondary mb-0">
+                Ozer puede transcribir los mensajes de audio de contactos y
+                grupos. En la <a href="#">configuración general</a> se puede
+                elegir si se transcriben en el mismo chat o en un chat privado.
+              </p>
+              <hr class="nav-sections__divisor" />
+              <p class="h6 mb-2">Configuración de contactos y grupos</p>
+              <p class="text-secondary mb-1">
+                La forma de recibir las transcripciones se puede cambiar
+                individualmente por cada contacto y cada grupo.
+              </p>
+              <p class="mb-0">
+                <a
+                  href="#"
+                  class="mb-1 d-flex align-items-center gap-1 text-decoration-none"
+                >
+                  <span class="text-decoration-underline"
+                    >Configuración de contactos</span
+                  >
+                  <span
+                    class="material-symbols-outlined size-20"
+                    aria-hidden="true"
+                  >
+                    arrow_forward
+                  </span>
+                </a>
+              </p>
+              <p class="mb-0">
+                <a
+                  href="#"
+                  class="d-flex align-items-center gap-1 text-decoration-none"
+                >
+                  <span class="text-decoration-underline"
+                    >Configuración de grupos</span
+                  >
+                  <span
+                    class="material-symbols-outlined size-20"
+                    aria-hidden="true"
+                  >
+                    arrow_forward
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Activar transcripciones</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="mb-3">
+                Se han pausado todas las transcripciones. Actívalas si quieres volver a recibirlas en tus chats
+              </p>
+              <button class="btn btn-lg btn-outline-primary">Activar transcripciones</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Reconectar</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="mb-3">¿No estás recibiendo las transcripciones?</p>
+              <button class="btn btn-lg btn-outline-primary">Reconectar</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Soporte</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="mb-3">
+                Si nos quieres contactar con alguna pregunta puedes hacerlo a
+                través de un correo electrónico a <strong>info@ozer.bot</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
