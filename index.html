@@ -26,12 +26,37 @@
     <header></header>
     <main>
       <article class="container mt-5">
-        <h1 class="d-flex align-items-center gap-1" style="font-size: 2.25rem">
-          <span class="material-symbols-outlined" style="font-size: 1.5rem"
-            >view_comfy_alt</span
-          >
+        <h1 class="h3">Ozer</h1>
+        <h2 class="h4">Pantallas</h2>
+        <div class="ps-3">
+          <h3 class="h5">Flujo Instalación</h3>
+          <ul>
+            <li><a href="./views/install/1-install.html">Página de Instalación</a></li>
+            <li><a href="./views/install/2-loading.html">Loading</a></li>
+            <li><a href="./views/install/3-install-success.html">Instalación exitosa</a></li>
+          </ul>
+        </div>
+        <div class="ps-3">
+          <h3 class="h5">Flujo Configuración general</h3>
+          <ul>
+            <li><a href="./views/config/1-default.html">Configuración general</a></li>
+          </ul>
+        </div>
+        <div class="mb-5 ps-3">
+          <h3 class="h5">Flujo Secciones del header</h3>
+          <ul>
+            <li><a href="./views/sections/1-commands.html">Comandos</a></li>
+            <li><a href="./views/sections/2-help.html">Ayuda</a></li>
+            <li><a href="./views/sections/3-help-activate.html">Ayuda - Activar transcripciones</a></li>
+            <li><a href="./views/sections/4-config-pause.html">Configuracion - transcripciones pausadas</a></li>
+            <li><a href="./views/sections/5-config-pause-alert.html">Configuracion - activar transcripciones</a></li>
+          </ul>
+        </div>
+
+        <h2 class="d-flex align-items-center gap-1 h4 mt-4">
+          <span class="material-symbols-outlined">view_comfy_alt</span>
           <span>Componentes</span>
-        </h1>
+        </h2>
         <section class="mt-5">
           <h2>Botones</h2>
           <button type="button" class="btn btn-primary">Primary</button>
@@ -73,86 +98,6 @@
             <button type="button" class="btn btn-outline-light">Light</button>
             <button type="button" class="btn btn-outline-dark">Dark</button>
             <button type="button" class="btn btn-outline-link">Link</button>
-          </div>
-        </section>
-        <section class="mt-5">
-          <h2>Desplegables</h2>
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-        </section>
-        <section class="mt-5">
-          <h2>Offcancas</h2>
-          <a
-            class="btn btn-primary"
-            data-bs-toggle="offcanvas"
-            href="#offcanvasExample"
-            role="button"
-            aria-controls="offcanvasExample"
-          >
-            Link with href
-          </a>
-          <button
-            class="btn btn-primary"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasExample"
-            aria-controls="offcanvasExample"
-          >
-            Button with data-bs-target
-          </button>
-
-          <div
-            class="offcanvas offcanvas-start"
-            tabindex="-1"
-            id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                Offcanvas
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <div>
-                Some text as placeholder. In real life you can have the elements
-                you have chosen. Like, text, images, lists, etc.
-              </div>
-              <div class="dropdown mt-3">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                >
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </section>
       </article>

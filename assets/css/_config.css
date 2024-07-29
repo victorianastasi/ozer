@@ -1,6 +1,12 @@
+.user-data {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .config-header,
 .form-bg {
-  background-color: white;
+  background-color: var(--white);
   padding: 1.5rem 1rem 0;
 }
 .form-bg {
@@ -55,38 +61,24 @@
 .nav-custom .nav-item .nav-link.active span:not(.material-symbols-outlined) {
   font-weight: 700;
 }
-
-.user-data {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 @media (max-width: 992px) {
-  .box-btn-mobile {
-    background-color: var(--white);
-    border-top: 1px solid var(--border-primary-color);
-    border-radius: 1.5rem;
-    padding: 1rem;
+  .form-footer {
+    margin-bottom: 104px;
   }
-  .alert-success-box {
-    background-color: var(--bs-body-bg);
-    margin-right: 1rem;
-    padding-right: 0;
+  .form-footer .box-btn-mobile {
+    background-color: var(--white);
+    border-top: 1px solid rgba(35, 61, 155, 0.1);
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 1rem;
+    margin-top: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
   }
-  .alert-success-box .alert-success.alert-outline.alert-success {
-    margin: 1rem;
-    margin-top: 0.25rem;
+  .form-footer .alert-success.alert-outline.alert-success {
     width: auto;
-  }
-  .box-btn-bg {
-    background-color: var(--white);
-  }
-  .alert-success-box:has(.alert-success.alert-outline.alert-success)
-    + .box-btn-bg {
-    background-color: var(--bs-body-bg);
+    margin: 0.25rem 1rem 0;
   }
 }
 @media (min-width: 992px) {
@@ -96,12 +88,13 @@
     display: flex;
     flex-direction: column-reverse;
   }
-  .box-btn-bg {
-    background-color: white;
+  .form-footer .box-btn-mobile {
+    background-color: var(--white);
     padding: 0 1.5rem 1.5rem;
     border-radius: 0 0 1.5rem 1.5rem;
+    margin-bottom: 2rem;
   }
-  .alert-success-box {
-    padding-top: 1.5rem;
+  .form-footer .box-btn-mobile .btn {
+    margin-bottom: 1.5rem;
   }
 }

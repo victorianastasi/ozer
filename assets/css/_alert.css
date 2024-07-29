@@ -27,6 +27,7 @@
   width: 1.5rem;
   opacity: 1;
   position: relative;
+  z-index: 0;
 }
 .alert-outline.alert-success .btn-close .material-symbols-outlined {
   color: var(--success-text-color);
