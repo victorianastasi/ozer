@@ -150,7 +150,7 @@
 
       <section class="container">
         <div class="row install-section">
-          <div class="col-12 col-lg-8 install-section__item">
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
             <div class="nav-sections mb-4">
               <h2 class="mb-0 h5">Tips</h2>
               <hr class="nav-sections__divisor custom-margin" />
@@ -174,7 +174,10 @@
                   <span class="text-decoration-underline"
                     >Configuración de contactos</span
                   >
-                  <span class="material-symbols-outlined" aria-hidden="true">
+                  <span
+                    class="material-symbols-outlined size-20"
+                    aria-hidden="true"
+                  >
                     arrow_forward
                   </span>
                 </a>
@@ -187,10 +190,84 @@
                   <span class="text-decoration-underline"
                     >Configuración de grupos</span
                   >
-                  <span class="material-symbols-outlined" aria-hidden="true">
+                  <span
+                    class="material-symbols-outlined size-20"
+                    aria-hidden="true"
+                  >
                     arrow_forward
                   </span>
                 </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Pausar transcripciones</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="mb-3">
+                ¿Quieres dejar de recibir todas las transcripciones?
+              </p>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-lg btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#pauseTranscriptsModal"
+              >
+                Pausar transcripciones
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="pauseTranscriptsModal"
+                tabindex="-1"
+                aria-labelledby="pauseTranscriptsModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <p class="h5 mb-2">
+                        ¿Quieres pausar todas las transcripciones?
+                      </p>
+                      <p class="mb-0">
+                        Estás a punto de pausar todas las transcripciones. La
+                        configuración quedará deshabilitada hasta que la actives
+                        nuevamente.
+                      </p>
+                    </div>
+                    <div class="modal-footer border-none">
+                      <button
+                        type="button"
+                        class="btn btn-lg btn-outline-primary outline-none"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancelar
+                      </button>
+                      <button type="button" class="btn btn-lg btn-danger">
+                        Pausar transcripciones
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Reconectar</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="mb-3">¿No estás recibiendo las transcripciones?</p>
+              <button class="btn btn-lg btn-outline-primary">Reconectar</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 install-section__item mb-2 mb-lg-3">
+            <div class="nav-sections mb-4">
+              <h2 class="mb-0 h5">Soporte</h2>
+              <hr class="nav-sections__divisor custom-margin" />
+              <p class="mb-3">
+                Si nos quieres contactar con alguna pregunta puedes hacerlo a
+                través de un correo electrónico a <strong>info@ozer.bot</strong>
               </p>
             </div>
           </div>

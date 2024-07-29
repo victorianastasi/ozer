@@ -1,61 +1,96 @@
 .btn {
-    font-size: var(--font-size-body-1);
-    line-height: var(--line-height-body-1);
+  font-size: var(--font-size-body-1);
+  line-height: var(--line-height-body-1);
 }
-.btn.btn-primary, .btn.btn-outline-primary, .btn.btn-outline-success, .btn.btn-success {
-    border: none;
-    outline: 2px solid transparent;
-    outline-offset: -2px;
+/* Tamaño grande */
+.btn-lg {
+  line-height: var(--line-height-body-1);
+  padding-top: 14.4px;
+  padding-bottom: 14.4px;
+  min-height: 48px;
+}
+/* Variantes */
+.btn.btn-primary,
+.btn.btn-outline-primary,
+.btn.btn-outline-success,
+.btn.btn-success,
+.btn.btn-outline-danger,
+.btn.btn-danger {
+  border: none;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
 }
 .btn.btn-primary {
-    background-color: var(--btn-primary-color);
-    outline-color: var(--btn-primary-color);
+  background-color: var(--btn-primary-color);
+  outline-color: var(--btn-primary-color);
 }
 .btn.btn-outline-primary {
-    color: var(--btn-primary-color);
-    outline-color: var(--btn-primary-color);
+  color: var(--btn-primary-color);
+  outline-color: var(--btn-primary-color);
 }
-.btn.btn-primary:hover, .btn.btn-outline-primary:hover {
-    background-color: var(--btn-primary-color-hover);
-    color: var(--white);
-    outline-color: var(--btn-primary-color-hover);
+.btn.btn-primary:hover,
+.btn.btn-outline-primary:hover {
+  background-color: var(--btn-primary-color-hover);
+  color: var(--white);
+  outline-color: var(--btn-primary-color-hover);
 }
 
 .btn.btn-outline-secondary {
-    outline-color: #6c757d;
+  outline-color: #6c757d;
 }
 
 .btn.btn-success {
-    background-color: var(--success-bg-color);
-    outline-color: var(--success-bg-color);
+  background-color: var(--success-bg-color);
+  outline-color: var(--success-bg-color);
 }
 .btn.btn-outline-success {
-    color: var(--success-bg-color);
-    outline-color: var(--success-bg-color);
+  color: var(--success-bg-color);
+  outline-color: var(--success-bg-color);
+}
+
+.btn.btn-outline-danger {
+  outline-color: var(--danger-bg-color);
+  color: var(--danger-text-color);
+}
+.btn.btn-outline-danger:hover {
+  color: var(--white);
+}
+.btn.btn-outline-danger:focus-visible,
+.btn.btn-outline-danger:focus {
+  outline: 1px solid var(--danger-bg-color);
+  color: var(--white);
+  background-color: var(--danger-bg-color);
+}
+.btn.btn-danger {
+  outline-color: var(--danger-bg-color);
+  background-color: var(--danger-bg-color);
+}
+.btn.btn-danger:hover {
+  color: var(--white);
 }
 
 /* check button */
 .form-check-input:checked {
-    box-shadow: inset 0 0 0 4px #fff;
-    background-color: var(--btn-primary-color);
-    border-color: var(--btn-primary-color);
+  box-shadow: inset 0 0 0 4px #fff;
+  background-color: var(--btn-primary-color);
+  border-color: var(--btn-primary-color);
 }
 
-.form-check-input:checked[type=radio] {
-    --bs-form-check-bg-image: none;
+.form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: none;
 }
 
 .form-check-input {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .form-check-label {
-    padding: .25rem;
-    padding-left: .5rem;
-    padding-right: .75rem;
-    margin-bottom: .5rem;
-    border-radius: .5rem;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 /* .form-check-input:checked[type=checkbox] {
