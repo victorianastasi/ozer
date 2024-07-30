@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ozer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="../../assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../../img/logo.svg" alt="Ozer.bot" />
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader" aria-label="Menú">
+          <span class="material-symbols-outlined" aria-hidden="true">
+            menu
+          </span>
+        </button>
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasHeader"
+          aria-labelledby="offcanvasHeaderLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasHeader"
+              aria-label="Cerrar">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              <div class="user-data d-lg-none">
+                <p class="mb-2 h4">Ariel</p>
+                <p class="mb-0 text-secondary">+346647384</p>
+              </div>
+              <div class="offcanvas-container-top">
+                <a href="#" class="offcanvas-link">
+                  <div class="offcanvas-link__text">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      keyboard_command_key
+                    </span>
+                    <span>Comandos</span>
+                  </div>
+                  <span class="material-symbols-outlined d-lg-none" aria-hidden="true">
+                    chevron_right
+                  </span>
+                </a>
+                <hr />
+                <a href="#" class="offcanvas-link">
+                  <div class="offcanvas-link__text">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      help
+                    </span>
+                    <span>Ayuda</span>
+                  </div>
+                  <span class="material-symbols-outlined d-lg-none" aria-hidden="true">
+                    chevron_right
+                  </span>
+                </a>
+                <hr />
+                <div class="dropdown">
+                  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="offcanvas-link__text">
+                      <span class="material-symbols-outlined d-lg-none" aria-hidden="true">
+                        language
+                      </span>
+                      <span>Español</span>
+                    </div>
+                    <span class="material-symbols-outlined btn-dropdown-icon" aria-hidden="true">
+                      expand_more
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item">English</button></li>
+                    <li><button class="dropdown-item">Deutsch</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="offcanvas-container-bottom">
+              <button class="offcanvas-logout" aria-label="Cerrar sesión">
+                <span class="d-lg-none">Cerrar sesión</span>
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  logout
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container position-relative">
+    <section class="container my-4">
+      <a href="#" class="d-flex align-items-center gap-1 text-decoration-none mb-2">
+        <span class="material-symbols-outlined" aria-hidden="true">
+          arrow_back
+        </span>
+        <span>Volver a la configuración</span>
+      </a>
+      <h1 class="mb-0 h4">Ayuda</h1>
+    </section>
+
+    <section class="container padding-x-sm-none">
+      <div class="row install-section">
+        <!-- Navegacion vertical -->
+        <div class="col-12 col-lg-4 install-section__item">
+          <div class="user-data d-none d-lg-block">
+            <p class="mb-2 h4">Ariel</p>
+            <p class="mb-0 text-secondary">+346647384</p>
+          </div>
+          <nav class="container padding-x-lg-none mb-4">
+            <ul class="nav nav-custom">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <span class="material-symbols-outlined d-none d-lg-block" aria-hidden="true">
+                    settings
+                  </span>
+                  <span class="body-1 d-lg-none">General</span>
+                  <span class="body-1 d-none d-lg-block">Configuración general</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span class="material-symbols-outlined d-none d-lg-block" aria-hidden="true">
+                    person
+                  </span>
+                  <span class="body-1 d-lg-none">Contactos</span>
+                  <span class="body-1 d-none d-lg-block">Configuración de contactos</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="material-symbols-outlined d-none d-lg-block" aria-hidden="true">
+                    groups
+                  </span>
+                  <span class="body-1 d-lg-none">Grupos</span>
+                  <span class="body-1 d-none d-lg-block">Configuración de grupos</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Navegacion vertical Fin -->
+        
+        <!-- Contenido -->
+        <div class="col-12 col-lg-8 install-section__item mb-lg-3">
+          <div class="pb-0">
+            <div class="contacts-container d-flex align-items-top gap-2 justify-content-between"> <!--d-flex align-items-top gap-2-->
+              <div>              
+                <h1 class="mb-0 h4">Configuración de contactos</h1>
+                <p class="mb-0 body-3 text-secondary">
+                  <strong>Modo de transcripción para contactos:</strong>
+                  Transcribir en el mismo chat
+                </p>
+              </div>
+              <div class="">
+                <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasContacts" aria-controls="offcanvasContacts">
+                  Agregar contacto
+                </button>                
+              </div>
+            </div>
+            <div class="contacts-container">
+              <table class="table" style="--bs-table-bg: transparent !important;">
+                <thead>
+                  <tr>
+                    <th scope="col">Alias</th>
+                    <th scope="col">Modo</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Andres Iniesta</td>
+                    <td>No transcribir</td>
+                    <td>
+                      <button class="btn" aria-label="Editar">
+                        <span class="material-symbols-outlined text-primary">edit</span>
+                      </button>
+                      <button class="btn" aria-label="Eliminar">
+                        <span class="material-symbols-outlined text-danger">delete</span>
+                      </button>
+                  </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Contenido fin -->
+            <!-- Offcanvas Contacts -->
+            <!-- <div class="offcanvas offcanvas-end offcanvas-contacts" tabindex="-1" id="offcanvasContacts"
+              aria-labelledby="offcanvasContactsLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
+                  Agregar contacto
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  Some text as placeholder. In real life you can have the
+                  elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
