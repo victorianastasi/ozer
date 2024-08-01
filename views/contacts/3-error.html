@@ -22,7 +22,6 @@
     />
     <link href="../../assets/css/styles.css" rel="stylesheet" />
   </head>
-
   <body>
     <header>
       <nav class="navbar">
@@ -149,6 +148,7 @@
       </nav>
     </header>
     <main class="main-container position-relative">
+
       <section class="container padding-x-sm-none mt-4">
         <div class="row install-section">
           <!-- Navegacion vertical -->
@@ -205,64 +205,43 @@
             </nav>
           </div>
           <!-- Navegacion vertical Fin -->
-
-          <!-- Contenido -->
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
               <div class="contacts-container custom-flex">
-                <!--d-flex align-items-top gap-2-->
                 <div>
-                  <h1 class="mb-0 h4">Configuración de contactos</h1>
+                  <h1 class="mb-0 h4">Configuración general</h1>
                   <p class="mb-0 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
                     Transcribir en el mismo chat
                   </p>
                 </div>
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-lg btn-primary"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasContacts"
-                    aria-controls="offcanvasContacts"
-                  >
-                    Agregar contacto
-                  </button>
-                </div>
               </div>
-              <div class="contacts-container p-0">
-                <table
-                  class="table"
-                  style="--bs-table-bg: transparent !important"
+              <div class="contacts-container">
+                <span
+                  class="material-symbols-outlined text-info size-32 mb-2 mb-lg-3"
+                  aria-hidden="true"
                 >
-                  <thead>
-                    <tr>
-                      <th scope="col">Alias</th>
-                      <th scope="col">Modo</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Andres Iniesta</td>
-                      <td>No transcribir</td>
-                      <td>
-                        <button class="btn" aria-label="Editar">
-                          <span class="material-symbols-outlined text-primary"
-                            >edit</span
-                          >
-                        </button>
-                        <button class="btn" aria-label="Eliminar">
-                          <span class="material-symbols-outlined text-danger"
-                            >delete</span
-                          >
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                  person
+                </span>
+                <h2 class="mb-2 mb-lg-3 h5 fw-normal contacts-subtitle">
+                  Agrega contactos y crea configuraciones de transcripción
+                  personalizadas
+                </h2>
+                <p class="mb-2 mb-lg-3 body-2 text-secondary">
+                  Si quieres tener una configuración diferente puedes agregar
+                  contactos y personalizar las transcripciones de cada chat
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-lg btn-primary"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasContacts"
+                  aria-controls="offcanvasContacts"
+                >
+                  Agregar contacto
+                </button>
               </div>
-              <!-- Contenido fin -->
+
               <!-- Offcanvas Contacts -->
               <div
                 class="offcanvas offcanvas-end offcanvas-contacts"
@@ -294,7 +273,7 @@
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control is-invalid"
                           id="nameContactsInput"
                           aria-describedby="nameContactsInputFeedback"
                           placeholder="Ingresa el nombre del contacto"
@@ -313,7 +292,7 @@
                         </p>
                         <div class="form-check">
                           <input
-                            class="form-check-input"
+                            class="form-check-input is-invalid"
                             type="radio"
                             name="contactRadio"
                             id="contactRadio1"
@@ -326,7 +305,7 @@
                         </div>
                         <div class="form-check">
                           <input
-                            class="form-check-input"
+                            class="form-check-input is-invalid"
                             type="radio"
                             name="contactRadio"
                             id="contactRadio2"
@@ -339,7 +318,7 @@
                         </div>
                         <div class="form-check">
                           <input
-                            class="form-check-input"
+                            class="form-check-input is-invalid"
                             type="radio"
                             name="contactRadio"
                             id="contactRadio3"

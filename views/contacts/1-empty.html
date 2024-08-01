@@ -148,20 +148,8 @@
       </nav>
     </header>
     <main class="main-container position-relative">
-      <section class="container my-4">
-        <a
-          href="#"
-          class="d-flex align-items-center gap-1 text-decoration-none mb-2"
-        >
-          <span class="material-symbols-outlined" aria-hidden="true">
-            arrow_back
-          </span>
-          <span>Volver a la configuración</span>
-        </a>
-        <h1 class="mb-0 h4">Ayuda</h1>
-      </section>
 
-      <section class="container padding-x-sm-none">
+      <section class="container padding-x-sm-none mt-4">
         <div class="row install-section">
           <!-- Navegacion vertical -->
           <div class="col-12 col-lg-4 install-section__item">
@@ -219,12 +207,14 @@
           <!-- Navegacion vertical Fin -->
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
-              <div class="contacts-container">
-                <h1 class="mb-0 h4">Configuración general</h1>
-                <p class="mb-0 body-3 text-secondary">
-                  <strong>Modo de transcripción para contactos:</strong>
-                  Transcribir en el mismo chat
-                </p>
+              <div class="contacts-container custom-flex">
+                <div>
+                  <h1 class="mb-0 h4">Configuración general</h1>
+                  <p class="mb-0 body-3 text-secondary">
+                    <strong>Modo de transcripción para contactos:</strong>
+                    Transcribir en el mismo chat
+                  </p>
+                </div>
               </div>
               <div class="contacts-container">
                 <span
@@ -267,36 +257,92 @@
                     type="button"
                     class="btn-close"
                     data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
+                    aria-label="Cerrar"
+                  >
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      close
+                    </span>
+                  </button>
                 </div>
                 <div class="offcanvas-body">
-                  <div>
-                    Some text as placeholder. In real life you can have the
-                    elements you have chosen. Like, text, images, lists, etc.
-                  </div>
-                  <div class="dropdown mt-3">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      Dropdown button
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
+                  <form action="" class="contactForm">
+                    <div>
+                      <div class="nameContacts">
+                        <label for="nameContactsInput" class="form-label body-2"
+                          >Nombre del contacto *</label
                         >
-                      </li>
-                    </ul>
-                  </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nameContactsInput"
+                          aria-describedby="nameContactsInputFeedback"
+                          placeholder="Ingresa el nombre del contacto"
+                          required
+                        />
+                        <p
+                          class="invalid-feedback"
+                          id="nameContactsInputFeedback"
+                        >
+                          Tienes seleccionar un contacto
+                        </p>
+                      </div>
+                      <div class="body-2">
+                        <p class="form-subtitle">
+                          Modo de transcripción para contactos *
+                        </p>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contactRadio"
+                            id="contactRadio1"
+                            aria-describedby="contactRadioFeedback"
+                            required
+                          />
+                          <label class="form-check-label" for="contactRadio1">
+                            Transcribir en el mismo chat
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contactRadio"
+                            id="contactRadio2"
+                            aria-describedby="contactRadioFeedback"
+                            required
+                          />
+                          <label class="form-check-label" for="contactRadio2">
+                            Transcribir en mi chat privado
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contactRadio"
+                            id="contactRadio3"
+                            aria-describedby="contactRadioFeedback"
+                            required
+                          />
+                          <label class="form-check-label" for="contactRadio3">
+                            No transcribir
+                          </label>
+                          <p class="invalid-feedback" id="contactRadioFeedback">
+                            Tienes que seleccionar una opción
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <button class="btn btn-lg btn-primary" type="submit">
+                        Agregar contacto
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
+              <!-- Offcanvas Contacts Fin -->
             </div>
           </div>
         </div>

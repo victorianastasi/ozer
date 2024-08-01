@@ -1,7 +1,13 @@
 .contacts-container {
   background-color: var(--white);
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem 1.5rem;
   margin-bottom: 1rem;
+}
+.contacts-container.custom-flex  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 @media (min-width: 992px) {
   .contacts-container {
@@ -11,6 +17,9 @@
   .contacts-subtitle {
     max-width: 400px;
   }
+  .contacts-container.custom-flex  {
+    gap: 0;
+  }
 }
 
 .offcanvas-contacts {
@@ -18,6 +27,71 @@
 }
 @media (min-width: 992px) {
   .offcanvas.offcanvas-end.offcanvas-contacts {
-    width: 768px;
+    width: 544px;
+    border-radius: 1.5rem 0 0 1.5rem;
+  }
+}
+
+.offcanvas-contacts .offcanvas-header {
+  padding: 3rem 1rem 2rem;
+}
+.offcanvas-contacts .offcanvas-header .btn-close {
+  background-image: none;
+  background-color: var(--btn-close-bg);
+  color: var(--bs-body-color);
+  margin: 0;
+  margin-left: auto;
+  opacity: 1;
+  z-index: 0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+}
+
+.offcanvas-contacts .offcanvas-header .btn-close .material-symbols-outlined {
+  font-size: 14px;
+  max-height: 14px;
+  max-width: 14px;
+}
+
+.offcanvas-contacts .offcanvas-body {
+  padding: 0 1rem;
+}
+.offcanvas-contacts .offcanvas-body .contactForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+.offcanvas-contacts .offcanvas-body .nameContacts {
+  margin-bottom: 2rem;
+}
+
+.offcanvas-contacts .offcanvas-body .form-subtitle {
+  margin-bottom: .75rem;
+}
+.offcanvas-contacts .offcanvas-body .btn-primary {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .offcanvas-contacts .offcanvas-header {
+    padding: 3rem 1.5rem 2rem;
+  }
+  .offcanvas-contacts .offcanvas-body {
+    padding: 0 1.5rem;
+  }
+  .offcanvas-contacts .offcanvas-body .contactForm {
+    padding-bottom: 3rem;
+  }
+  .offcanvas-contacts .offcanvas-body .btn-primary {
+    width: inherit;
   }
 }
