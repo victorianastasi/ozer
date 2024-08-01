@@ -82,8 +82,19 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: var(--bs-dark-text-emphasis);
+  color: var(--bs-body-color);
   gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+.navbar .offcanvas-body .offcanvas-container-top .offcanvas-link:hover {
+  background-color: var(--nav-item-bg-hover);
+  color: var(--text-link-color);
+}
+.navbar .offcanvas-body .offcanvas-container-top .offcanvas-link:focus,
+.navbar .offcanvas-body .offcanvas-container-top .offcanvas-link:focus-visible {
+  box-shadow: 0 0 0 .25rem var(--btn-primary-border-focus);
+  outline: none;
 }
 
 .navbar .offcanvas-body .offcanvas-container-top .offcanvas-link__text {
@@ -160,14 +171,16 @@
 @media screen and (min-width: 992px) {
   .navbar .offcanvas-body .offcanvas-container-bottom {
     padding: 0;
+    display: flex;
+    align-items: center;
   }
   .navbar .offcanvas-body .offcanvas-container-bottom .offcanvas-logout {
     padding: 0 2px;
     min-height: 24px;
   }
 }
-.navbar .offcanvas-body .offcanvas-container-top .offcanvas-link:focus-visible,
-.navbar .offcanvas-body .offcanvas-container-top .dropdown-toggle:focus-visible,
+
+/* .navbar .offcanvas-body .offcanvas-container-top .dropdown-toggle:focus-visible,
 .navbar .offcanvas-header .btn-close:focus-visible,
 .navbar .navbar-brand:focus-visible,
 .navbar
@@ -176,4 +189,4 @@
   .offcanvas-logout:focus-visible {
   outline: 2px solid var(--border-primary-color);
   border-radius: 0.5rem;
-}
+} */

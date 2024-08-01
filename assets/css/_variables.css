@@ -3,6 +3,8 @@
     --white: #FFFFFF;
     --btn-primary-color: #233D9B;
     --btn-primary-color-hover: #142A79;
+    --btn-primary-border-focus: #081957;
+    --btn-primary-color-active: #081957;
     --text-link-color: #3754BD;
     --text-link-color-hover: #233D9B;
     --bs-body-color: #1E2024;
@@ -12,7 +14,9 @@
 
     --btn-close-bg: #E9ECF5;
 
-    --nav-item-bg: #E0E4F3;
+    /* --nav-item-bg: #E0E4F3; */
+    --nav-item-bg-hover: rgba(35, 61, 155, 0.05);
+    --nav-item-bg-active: rgba(35, 61, 155, 0.1);
 
     --success-bg-color: #408559;
     --success-secondary-bg-color: #D6E6DE;

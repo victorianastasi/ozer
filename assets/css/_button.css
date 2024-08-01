@@ -5,8 +5,7 @@
 /* Tamaño grande */
 .btn-lg {
   line-height: var(--line-height-body-1);
-  padding-top: 14.4px;
-  padding-bottom: 14.4px;
+  padding: 0.5rem 1rem;
   min-height: 48px;
 }
 /* Variantes */
@@ -20,25 +19,50 @@
   outline: 1px solid transparent;
   outline-offset: -1px;
 }
+/* btn-primary */
 .btn.btn-primary {
   background-color: var(--btn-primary-color);
   outline-color: var(--btn-primary-color);
 }
-.btn.btn-outline-primary {
-  color: var(--btn-primary-color);
-  outline-color: var(--btn-primary-color);
-}
-.btn.btn-primary:hover,
-.btn.btn-outline-primary:hover {
+.btn.btn-primary:hover {
   background-color: var(--btn-primary-color-hover);
   color: var(--white);
   outline-color: var(--btn-primary-color-hover);
 }
-
+.btn.btn-primary:focus {
+  box-shadow: 0 0 0 .25rem var(--btn-primary-border-focus);
+}
+.btn.btn-primary:active {
+  background-color: var(--btn-primary-color-active);
+  outline-color: var(--btn-primary-color-active);
+}
+/* btn-outline-primary */
+.btn.btn-outline-primary {
+  color: var(--btn-primary-color);
+  outline-color: var(--btn-primary-color);
+}
+.btn.btn-outline-primary:hover {
+  background-color: var(--btn-primary-color);
+  outline-color: var(--btn-primary-color);
+  color: var(--white);
+}
+.btn.btn-outline-primary:focus {
+  box-shadow: 0 0 0 .25rem var(--btn-primary-border-focus);
+  color: var(--btn-primary-color-hover);
+}
+.btn.btn-outline-primary:focus:hover {
+  color: var(--white);
+}
+.btn.btn-outline-primary:active {
+  color: var(--white);
+  background-color: var(--btn-primary-color-active);
+  outline-color: var(--btn-primary-color-active)
+}
+/* btn-outline-secondary */
 .btn.btn-outline-secondary {
   outline-color: #6c757d;
 }
-
+/* btn-success */
 .btn.btn-success {
   background-color: var(--success-bg-color);
   outline-color: var(--success-bg-color);
@@ -47,7 +71,7 @@
   color: var(--success-bg-color);
   outline-color: var(--success-bg-color);
 }
-
+/* btn-btn-outline-danger */
 .btn.btn-outline-danger {
   outline-color: var(--danger-bg-color);
   color: var(--danger-text-color);
