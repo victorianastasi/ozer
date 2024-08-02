@@ -109,6 +109,9 @@
   gap: 0.25rem;
 }
 @media screen and (min-width: 992px) {
+  .navbar .offcanvas-body .offcanvas-container-top .offcanvas-link {
+    padding: 0.25rem 0.5rem;
+  }
   .navbar .offcanvas-body .offcanvas-container-top .offcanvas-link__text {
     flex-direction: row-reverse;
   }

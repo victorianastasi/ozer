@@ -69,4 +69,8 @@ body {
     max-width: 926px;
     padding: 0;
   }
+  
+}
+.br-lg-24 {
+  border-radius: 1.5rem !important;
 }
