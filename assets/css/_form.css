@@ -98,7 +98,7 @@
   box-shadow: inset 0 0 0 1px var(--danger-bg-color);
 }
 .form-control.is-invalid:focus {
-  box-shadow: inset 0 0 0 0.25rem var(--danger-border-color);
+  box-shadow: inset 0 0 0 0.125rem var(--danger-border-color);
 }
 .invalid-feedback {
   color: var(--danger-bg-color);

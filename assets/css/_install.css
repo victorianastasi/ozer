@@ -46,9 +46,28 @@
 }
 .section-authcode input {
   border: none;
-  font-size: 2rem;
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 57.6px;
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   text-align: center;
+  min-height: 74px;
+}
+
+.custom-loading-spacer {
+  margin-top: 120px;
+}
+@media (min-width: 992px) {
+  .custom-loading-spacer {
+    margin-top: 192px;
+  }
+}
+@media (min-width: 992px) {
+  .install-subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
 }
