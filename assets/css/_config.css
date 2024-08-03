@@ -78,7 +78,7 @@
 }
 @media (max-width: 576px) {
   .form-footer {
-    margin-bottom: 90px;
+    margin-bottom: 1.5rem;
   }
   .form-footer .box-btn-mobile {
     background-color: var(--white);
