@@ -8,6 +8,7 @@
 @import '_component_header.css';
 @import '_component_form.css';
 @import '_component_modal.css';
+@import '_component_tooltip.css';
 @import '_install.css';
 @import '_install-success.css';
 @import '_sections.css';

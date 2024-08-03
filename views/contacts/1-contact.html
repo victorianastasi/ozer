@@ -210,57 +210,44 @@
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
               <div class="contacts-container custom-flex">
-                <!--d-flex align-items-top gap-2-->
                 <div>
                   <h1 class="mb-0 h4">Configuración de contactos</h1>
-                  <p class="mb-0 body-3 text-secondary">
+                  <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
                     Transcribir en el mismo chat
                   </p>
                 </div>
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-lg btn-primary"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasContacts"
-                    aria-controls="offcanvasContacts"
-                  >
-                    Agregar contacto
-                  </button>
-                </div>
               </div>
-              <div class="contacts-container p-0">
-                <table
-                  class="table"
-                  style="--bs-table-bg: transparent !important"
+              <div class="contacts-container contacts-container-data">
+                <div class="icon-container">
+                    <span
+                    class="material-symbols-outlined text-info size-32"
+                    aria-hidden="true"
+                  >
+                    person
+                  </span>
+                </div>
+                
+                <div>
+                    <h2 class="mb-2 h5 fw-normal contacts-subtitle">
+                        Agrega contactos y crea configuraciones de transcripción
+                        personalizadas
+                      </h2>
+                      <p class="mb-0 body-2 text-secondary">
+                        Si quieres tener una configuración diferente puedes agregar
+                        contactos y personalizar las transcripciones de cada chat
+                      </p>
+                </div>
+                
+                <button
+                  type="button"
+                  class="btn btn-lg btn-primary"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasContacts"
+                  aria-controls="offcanvasContacts"
                 >
-                  <thead>
-                    <tr>
-                      <th scope="col">Alias</th>
-                      <th scope="col">Modo</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Andres Iniesta</td>
-                      <td>No transcribir</td>
-                      <td>
-                        <button class="btn" aria-label="Editar">
-                          <span class="material-symbols-outlined text-primary"
-                            >edit</span
-                          >
-                        </button>
-                        <button class="btn" aria-label="Eliminar">
-                          <span class="material-symbols-outlined text-danger"
-                            >delete</span
-                          >
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                  Agregar contacto
+                </button>
               </div>
               <!-- Contenido fin -->
               <!-- Offcanvas Contacts -->
@@ -286,7 +273,7 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm">
+                  <form action="" class="contactForm" id="contactForm">
                     <div>
                       <!-- INICIO Buscador de contacto -->
                       <div class="nameContacts">
@@ -301,7 +288,7 @@
                           id="contactSearchInput"
                           aria-describedby="contactSearchInputFeedback"
                           placeholder="Ingresa el nombre del contacto"
-                          required
+                          
                         />
                         <div
                           id="suggestionsContainer"
@@ -326,7 +313,7 @@
                             name="contactRadio"
                             id="contactRadio1"
                             aria-describedby="contactRadioFeedback"
-                            required
+                            
                           />
                           <label class="form-check-label" for="contactRadio1">
                             Transcribir en el mismo chat
@@ -339,28 +326,27 @@
                             name="contactRadio"
                             id="contactRadio2"
                             aria-describedby="contactRadioFeedback"
-                            required
+                            
                           />
                           <label class="form-check-label" for="contactRadio2">
                             Transcribir en mi chat privado
                           </label>
                         </div>
                         <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="contactRadio"
-                            id="contactRadio3"
-                            aria-describedby="contactRadioFeedback"
-                            required
-                          />
-                          <label class="form-check-label" for="contactRadio3">
-                            No transcribir
-                          </label>
-                          <p class="invalid-feedback" id="contactRadioFeedback">
-                            Tienes que seleccionar una opción
-                          </p>
-                        </div>
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="contactRadio"
+                              id="contactRadio3"
+                              aria-describedby="contactRadioFeedback"
+                            />
+                            <label class="form-check-label" for="contactRadio3">
+                              No transcribir
+                            </label>
+                            <p class="invalid-feedback" id="contactRadioFeedback">
+                              Tienes que seleccionar una opción
+                            </p>
+                          </div>
                       </div>
                     </div>
                     <div class="text-end">
@@ -390,5 +376,7 @@
     ></script>
     <!-- Buscador de Contacto -->
     <script src="../../js/search-contact.js"></script>
+    <!-- Validación de formulario -->
+    <script src="../../js/contact-form-validation.js"></script>
   </body>
 </html>

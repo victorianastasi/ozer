@@ -22,6 +22,7 @@
     />
     <link href="../../assets/css/styles.css" rel="stylesheet" />
   </head>
+
   <body>
     <header>
       <nav class="navbar">
@@ -148,7 +149,6 @@
       </nav>
     </header>
     <main class="main-container position-relative">
-
       <section class="container padding-x-sm-none mt-4">
         <div class="row install-section">
           <!-- Navegacion vertical -->
@@ -205,43 +205,73 @@
             </nav>
           </div>
           <!-- Navegacion vertical Fin -->
+
+          <!-- Contenido -->
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
               <div class="contacts-container custom-flex">
                 <div>
-                  <h1 class="mb-0 h4">Configuración general</h1>
-                  <p class="mb-0 body-3 text-secondary">
+                  <h1 class="mb-0 h4">Configuración de contactos</h1>
+                  <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
                     Transcribir en el mismo chat
                   </p>
                 </div>
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-lg btn-primary"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasContacts"
+                    aria-controls="offcanvasContacts"
+                  >
+                    Agregar contacto
+                  </button>
+                </div>
               </div>
-              <div class="contacts-container">
-                <span
-                  class="material-symbols-outlined text-info size-32 mb-2 mb-lg-3"
-                  aria-hidden="true"
+              <div class="contacts-container contacts-container-table">
+                <table
+                  class="table"
+                  style="--bs-table-bg: transparent !important"
                 >
-                  person
-                </span>
-                <h2 class="mb-2 mb-lg-3 h5 fw-normal contacts-subtitle">
-                  Agrega contactos y crea configuraciones de transcripción
-                  personalizadas
-                </h2>
-                <p class="mb-2 mb-lg-3 body-2 text-secondary">
-                  Si quieres tener una configuración diferente puedes agregar
-                  contactos y personalizar las transcripciones de cada chat
-                </p>
-                <button
-                  type="button"
-                  class="btn btn-lg btn-primary"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasContacts"
-                  aria-controls="offcanvasContacts"
-                >
-                  Agregar contacto
-                </button>
+                  <thead>
+                    <tr>
+                      <th scope="col">Alias</th>
+                      <th scope="col">Modo</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Andrés Iniesta</td>
+                      <td>No transcribir</td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-icon"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="bottom"
+                          data-bs-title="Editar"
+                          data-bs-custom-class="custom-tooltip"
+                        >
+                          <span class="material-symbols-outlined text-primary">edit</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-icon"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="right"
+                          data-bs-title="Eliminar"
+                          data-bs-custom-class="custom-tooltip"
+                        >
+                          <span class="material-symbols-outlined text-danger">delete</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-
+              <!-- Contenido fin -->
               <!-- Offcanvas Contacts -->
               <div
                 class="offcanvas offcanvas-end offcanvas-contacts"
@@ -265,7 +295,7 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm">
+                  <form action="" class="contactForm" id="contactForm">
                     <div>
                       <!-- INICIO Buscador de contacto -->
                       <div class="nameContacts">
@@ -276,11 +306,10 @@
                         >
                         <input
                           type="search"
-                          class="form-control is-invalid"
+                          class="form-control"
                           id="contactSearchInput"
                           aria-describedby="contactSearchInputFeedback"
                           placeholder="Ingresa el nombre del contacto"
-                          required
                         />
                         <div
                           id="suggestionsContainer"
@@ -300,12 +329,11 @@
                         </p>
                         <div class="form-check">
                           <input
-                            class="form-check-input is-invalid"
+                            class="form-check-input"
                             type="radio"
                             name="contactRadio"
                             id="contactRadio1"
                             aria-describedby="contactRadioFeedback"
-                            required
                           />
                           <label class="form-check-label" for="contactRadio1">
                             Transcribir en el mismo chat
@@ -313,12 +341,11 @@
                         </div>
                         <div class="form-check">
                           <input
-                            class="form-check-input is-invalid"
+                            class="form-check-input"
                             type="radio"
                             name="contactRadio"
                             id="contactRadio2"
                             aria-describedby="contactRadioFeedback"
-                            required
                           />
                           <label class="form-check-label" for="contactRadio2">
                             Transcribir en mi chat privado
@@ -326,12 +353,11 @@
                         </div>
                         <div class="form-check">
                           <input
-                            class="form-check-input is-invalid"
+                            class="form-check-input"
                             type="radio"
                             name="contactRadio"
                             id="contactRadio3"
                             aria-describedby="contactRadioFeedback"
-                            required
                           />
                           <label class="form-check-label" for="contactRadio3">
                             No transcribir
@@ -369,5 +395,9 @@
     ></script>
     <!-- Buscador de Contacto -->
     <script src="../../js/search-contact.js"></script>
+    <!-- Validación de formulario -->
+    <script src="../../js/contact-form-validation.js"></script>
+    <!-- Tooltip -->
+    <script src="../../js/tooltip.js"></script>
   </body>
 </html>
