@@ -9,6 +9,12 @@
   padding: 0.5rem 1rem;
   min-height: 48px;
 }
+/* Tamaño chico */
+.btn-sm {
+  line-height: var(--line-height-body-2);
+  padding: 0.5rem;
+  min-height: 33px;
+}
 /* Variantes */
 .btn.btn-primary,
 .btn.btn-outline-primary,

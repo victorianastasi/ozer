@@ -147,20 +147,7 @@
         </div>
       </nav>
     </header>
-    <main class="main-container position-relative">
-      <section class="container my-4">
-        <a
-          href="#"
-          class="d-flex align-items-center gap-1 text-decoration-none mb-2"
-        >
-          <span class="material-symbols-outlined" aria-hidden="true">
-            arrow_back
-          </span>
-          <span>Volver a la configuración</span>
-        </a>
-        <h1 class="mb-0 h4">Ayuda</h1>
-      </section>
-
+    <main class="main-container mt-3">
       <section class="container padding-x-sm-none">
         <div class="row install-section">
           <!-- Navegacion vertical -->
@@ -220,10 +207,41 @@
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0 rounded-0 rounded-lg-4">
               <div class="config-header">
-                <h1 class="mb-4 h4">Configuración general</h1>
-                <hr class="sections-box__divisor custom-margin mb-0" />
+                <h1 class="mb-3 h4">Configuración general</h1>
+                <!-- Alerta -->
+                <div
+                  class="alert alert-info d-flex align-items-top gap-2"
+                  role="alert"
+                  id="activateTrancripAlert"
+                >
+                  <span
+                    class="material-symbols-outlined text-info"
+                    aria-hidden="true"
+                  >
+                    info
+                  </span>
+                  <div class="d-flex flex-column flex-lg-row justify-content-between gap-2 flex-grow-1">
+                    <p class="text-danger body-2 mb-0 mt-sm-1 mt-lg-0">
+                      <span>Se han pausado todas las transcripciones. </span>
+                      <span class="d-lg-block"
+                        >Actívalas si quieres volver a recibirlas en tus
+                        chats</span
+                      >
+                    </p>
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-outline-primary w-lg-max p-2"
+                        id="activateTrancripToastBtn"
+                      >
+                        <span class="body-2">Activar transcripciones</span>
+                      </button>
+                  </div>
+                </div>
+                <!-- Alerta Fin-->
+                <hr class="sections-box__divisor custom-margin mt-4 mb-0" />
               </div>
-              <!-- Formulario - Radio -->
+
+              <!-- Formulario -->
               <form class="body-2">
                 <div class="form-bg">
                   <p class="fw-bold mb-2">
@@ -305,13 +323,12 @@
                     Al habilitar esta configuración, también se transcribirán
                     los mensajes de voz que envíes a tus contactos
                   </p>
-                  <div class="form-check pb-2">
+                  <div class="form-check">
                     <input
                       class="form-check-input"
                       type="checkbox"
                       name="flexRadioDefault"
                       id="flexCheckboxDefault1"
-                      checked
                     />
                     <label class="form-check-label" for="flexCheckboxDefault1">
                       Transcribir mis mensajes de voz
@@ -320,56 +337,121 @@
                 </div>
 
                 <div class="form-footer">
-                  <!-- Toast éxito -->
-                  <div class="position-relative">
+                  <!--  ====== Toast ====== -->
+                  <div class="toast-container-position">
                     <div class="toast-container custom-toast">
+                      <!-- === Toast éxito Activar Transcripciones === -->
                       <div
-                        id="activeTrancriptionsToast"
-                        class="toast"
+                        id="activateTrancripToast"
+                        class="toast toast-success"
                         role="alert"
                         aria-live="assertive"
                         aria-atomic="true"
                       >
-                        <div class="toast-content">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          check_circle
+                        </span>
+                        <span class="toast-content__text"
+                          >Transcripciones activadas</span
+                        >
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="toast"
+                          aria-label="Cerrar"
+                        >
                           <span
                             class="material-symbols-outlined"
                             aria-hidden="true"
                           >
-                            check_circle
+                            close
                           </span>
-                          <span class="toast-content__text"
-                            >Transcripciones activadas</span
-                          >
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="toast"
-                            aria-label="Cerrar"
-                          >
-                            <span
-                              class="material-symbols-outlined"
-                              aria-hidden="true"
-                            >
-                              close
-                            </span>
-                          </button>
-                        </div>
+                        </button>
                       </div>
+                      <!-- === Toast éxito Activar Transcripciones Fin === -->
+                      <!-- === Toast éxito Config === -->
+                      <div
+                        id="successConfigToast"
+                        class="toast toast-success"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                      >
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          check_circle
+                        </span>
+                        <span class="toast-content__text"
+                          >Configuración guardada con éxito</span
+                        >
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="toast"
+                          aria-label="Cerrar"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            aria-hidden="true"
+                          >
+                            close
+                          </span>
+                        </button>
+                      </div>
+                      <!-- === Toast éxito Config Fin === -->
+
+                      <!-- === Toast danger === -->
+                      <!-- <div
+                        id="dangerConfigToast"
+                        class="toast toast-danger"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                      >
+                        <span
+                        class="material-symbols-outlined"
+                        aria-hidden="true"
+                        >
+                        error
+                        </span>
+                        <span class="toast-content__text"
+                        >Ha ocurrido un error, intenta nuevamente</span
+                        >
+                        <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Cerrar"
+                        >
+                        <span
+                            class="material-symbols-outlined"
+                            aria-hidden="true"
+                        >
+                            close
+                        </span>
+                        </button>
+                      </div> -->
+                      <!-- === Toast danger Fin === -->
                     </div>
                   </div>
-                  <!-- Toast éxito Fin -->
-                  <div class="py-3 pb-lg-0 d-flex box-btn-mobile">
+                  <!-- ====== Toast Fin ====== -->
+                  <div class="box-btn-mobile">
                     <button
                       type="button"
-                      class="btn btn-primary btn-lg w-100 w-lg-auto ms-lg-auto"
-                      id="activeTrancriptionsToastBtn"
+                      class="btn btn-primary btn-lg w-100 w-sm-auto ms-sm-auto"
+                      id="configToastBtn"
                     >
                       Guardar cambios
                     </button>
                   </div>
                 </div>
               </form>
-              <!-- Formulario - Radio Fin-->
+              <!-- Formulario Fin-->
             </div>
           </div>
         </div>
@@ -389,24 +471,50 @@
 
     <!-- Toast script -->
     <script>
-      const activeTrancriptionsToastTrigger = document.getElementById(
-        "activeTrancriptionsToastBtn"
-      );
-      const activeTrancriptionsToast = document.getElementById(
-        "activeTrancriptionsToast"
-      );
+      const configToastTrigger = document.getElementById("configToastBtn");
+      const successConfigToast = document.getElementById("successConfigToast");
+      const dangerConfigToast = document.getElementById("dangerConfigToast");
 
-      if (activeTrancriptionsToastTrigger) {
-        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(
-          activeTrancriptionsToast
-        );
-        activeTrancriptionsToastTrigger.addEventListener("click", () => {
-          toastBootstrap.show();
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-          });
+      const activateTrancripToastTrigger = document.getElementById("activateTrancripToastBtn");
+      const activateTrancripToast = document.getElementById("activateTrancripToast");
+      const activateTrancripAlert = document.getElementById("activateTrancripAlert");
+      const checkbox = document.getElementById('flexCheckboxDefault1');
+
+      const scrollToBottom = () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
         });
+      };
+      if (configToastTrigger) {
+        if (successConfigToast) {
+          const successToastBootstrap =
+            bootstrap.Toast.getOrCreateInstance(successConfigToast);
+          configToastTrigger.addEventListener("click", () => {
+            successToastBootstrap.show();
+            scrollToBottom();
+          });
+        }
+        if (dangerConfigToast) {
+          const dangerToastBootstrap =
+            bootstrap.Toast.getOrCreateInstance(dangerConfigToast);
+          configToastTrigger.addEventListener("click", () => {
+            dangerToastBootstrap.show();
+            scrollToBottom();
+          });
+        }
+      }
+      if (activateTrancripToastTrigger) {
+        if (activateTrancripToast) {
+          const activateTrancripToastBootstrap =
+            bootstrap.Toast.getOrCreateInstance(activateTrancripToast);
+          activateTrancripToastTrigger.addEventListener("click", () => {
+            activateTrancripToastBootstrap.show();
+            activateTrancripAlert.classList.add("d-none");
+            checkbox.setAttribute('checked', 'true');
+            scrollToBottom();
+          });
+        }
       }
     </script>
   </body>
