@@ -148,7 +148,6 @@
       </nav>
     </header>
     <main class="main-container position-relative">
-
       <section class="container padding-x-sm-none mt-4">
         <div class="row install-section">
           <!-- Navegacion vertical -->
@@ -267,25 +266,33 @@
                 <div class="offcanvas-body">
                   <form action="" class="contactForm">
                     <div>
+                      <!-- INICIO Buscador de contacto -->
                       <div class="nameContacts">
-                        <label for="nameContactsInput" class="form-label body-2"
+                        <label
+                          for="contactSearchInput"
+                          class="form-label body-2"
                           >Nombre del contacto *</label
                         >
                         <input
-                          type="text"
+                          type="search"
                           class="form-control"
-                          id="nameContactsInput"
-                          aria-describedby="nameContactsInputFeedback"
+                          id="contactSearchInput"
+                          aria-describedby="contactSearchInputFeedback"
                           placeholder="Ingresa el nombre del contacto"
                           required
                         />
+                        <div
+                          id="suggestionsContainer"
+                          class="suggestions"
+                        ></div>
                         <p
                           class="invalid-feedback"
-                          id="nameContactsInputFeedback"
+                          id="contactSearchInputFeedback"
                         >
-                          Tienes seleccionar un contacto
+                          Tienes que seleccionar un contacto
                         </p>
                       </div>
+                      <!-- FIN Buscador de contacto -->
                       <div class="body-2">
                         <p class="form-subtitle">
                           Modo de transcripción para contactos *
@@ -359,5 +366,7 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <!-- Buscador de Contacto -->
+     <script src="../../js/search-contact.js"></script>
   </body>
 </html>

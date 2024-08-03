@@ -60,7 +60,7 @@
 }
 
 .offcanvas-contacts .offcanvas-body {
-  padding: 0 1rem;
+  padding: 0;
 }
 .offcanvas-contacts .offcanvas-body .contactForm {
   display: flex;
@@ -68,10 +68,11 @@
   height: 100%;
   overflow-y: auto;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  padding: 0 1rem 1.5rem;
 }
 .offcanvas-contacts .offcanvas-body .nameContacts {
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .offcanvas-contacts .offcanvas-body .form-subtitle {
@@ -85,11 +86,8 @@
   .offcanvas-contacts .offcanvas-header {
     padding: 3rem 1.5rem 2rem;
   }
-  .offcanvas-contacts .offcanvas-body {
-    padding: 0 1.5rem;
-  }
   .offcanvas-contacts .offcanvas-body .contactForm {
-    padding-bottom: 3rem;
+    padding: 0 1.5rem 3rem;
   }
   .offcanvas-contacts .offcanvas-body .btn-primary {
     width: inherit;
