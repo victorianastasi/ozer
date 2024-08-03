@@ -1,6 +1,7 @@
 .btn {
   font-size: var(--font-size-body-1);
   line-height: var(--line-height-body-1);
+  letter-spacing: -0.176px;
 }
 /* Tamaño grande */
 .btn-lg {
