@@ -4,24 +4,27 @@
   border-radius: 1.5rem;
   margin-bottom: 1rem;
 }
+@media (min-width: 992px) {
+  .user-data {
+    margin-bottom: 1.5rem;
+  }
+}
 .config-header,
 .form-bg {
   background-color: var(--white);
-  padding: 1.5rem 1rem 0;
 }
 .form-bg {
-  padding-bottom: 0.25rem;
+  padding: 1.5rem;
 }
-@media (min-width: 992px) {
+.config-header {
+  padding: 1.5rem 1.5rem 0;
+}
+@media (min-width: 576px) {
   .config-header {
     border-radius: 1.5rem 1.5rem 0 0;
-    padding: 1.5rem 1.5rem 0;
-  }
-  .form-bg {
-    padding: 1.5rem 1.5rem 0;
   }
 }
-.nav-custom {
+.aside-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,12 +34,12 @@
   margin-right: auto;
 }
 @media (min-width: 992px) {
-  .nav-custom .nav-item {
+  .aside-nav .nav-item {
     width: 100%;
     max-width: 100%;
   }
 }
-.nav-custom .nav-item .nav-link {
+.aside-nav .nav-item .nav-link {
   background-color: var(--nav-item-bg-hover);
   border-radius: 0.5rem;
   color: var(--bs-body-color);
@@ -49,27 +52,27 @@
 }
 
 @media (min-width: 992px) {
-  .nav-custom .nav-item .nav-link {
+  .aside-nav .nav-item .nav-link {
     min-height: 56px;
     background-color: transparent;
   }
 }
-.nav-custom .nav-item .nav-link:hover {
+.aside-nav .nav-item .nav-link:hover {
   color: var(--text-link-color);
   background-color: var(--nav-item-bg-hover);
 }
-.nav-custom .nav-item .nav-link:focus {
+.aside-nav .nav-item .nav-link:focus {
   box-shadow: 0 0 0 0.25rem var(--btn-primary-border-focus);
 }
-.nav-custom .nav-item .nav-link.active,
-.nav-custom .nav-item .nav-link:active {
+.aside-nav .nav-item .nav-link.active,
+.aside-nav .nav-item .nav-link:active {
   color: var(--text-link-color);
   background-color: var(--nav-item-bg-active);
 }
-.nav-custom .nav-item .nav-link.active span:not(.material-symbols-outlined) {
+.aside-nav .nav-item .nav-link.active span:not(.material-symbols-outlined) {
   font-weight: 700;
 }
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .form-footer {
     margin-bottom: 90px;
   }
@@ -85,7 +88,7 @@
     width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .form-footer {
     border-radius: 0 0 1.5rem 1.5rem;
     margin-top: 0;
@@ -97,8 +100,5 @@
     padding: 0 1.5rem 1.5rem;
     border-radius: 0 0 1.5rem 1.5rem;
     margin-bottom: 1rem;
-  }
-  .form-footer .box-btn-mobile .btn {
-    margin-bottom: 1.5rem;
   }
 }

@@ -147,20 +147,7 @@
         </div>
       </nav>
     </header>
-    <main class="main-container">
-      <section class="container my-4">
-        <a
-          href="#"
-          class="d-flex align-items-center gap-1 text-decoration-none mb-2"
-        >
-          <span class="material-symbols-outlined" aria-hidden="true">
-            arrow_back
-          </span>
-          <span>Volver a la configuración</span>
-        </a>
-        <h1 class="mb-0 h4">Ayuda</h1>
-      </section>
-
+    <main class="main-container mt-3">
       <section class="container padding-x-sm-none">
         <div class="row install-section">
           <!-- Navegacion vertical -->
@@ -170,7 +157,7 @@
               <p class="mb-0 text-secondary">+346647384</p>
             </div>
             <nav class="container padding-x-lg-none mb-4">
-              <ul class="nav nav-custom">
+              <ul class="nav aside-nav">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">
                     <span
@@ -221,7 +208,7 @@
             <div class="pb-0 rounded-0 rounded-lg-4">
               <div class="config-header">
                 <h1 class="mb-4 h4">Configuración general</h1>
-                <hr class="nav-sections__divisor custom-margin mb-0" />
+                <hr class="sections-box__divisor custom-margin mb-0" />
               </div>
 
               <!-- Formulario -->
@@ -312,6 +299,7 @@
                       type="checkbox"
                       name="flexRadioDefault"
                       id="flexCheckboxDefault1"
+                      checked
                     />
                     <label class="form-check-label" for="flexCheckboxDefault1">
                       Transcribir mis mensajes de voz
@@ -320,10 +308,82 @@
                 </div>
 
                 <div class="form-footer">
-                  <div class="py-3 pb-lg-0 d-flex box-btn-mobile">
+                  <!--  ====== Toast ====== -->
+                  <div class="toast-container-position">
+                    <div class="toast-container custom-toast">
+                      <!-- === Toast éxito === -->
+                      <div
+                        id="successConfigToast"
+                        class="toast toast-success"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                      >
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          check_circle
+                        </span>
+                        <span class="toast-content__text"
+                          >Configuración guardada con éxito</span
+                        >
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="toast"
+                          aria-label="Cerrar"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            aria-hidden="true"
+                          >
+                            close
+                          </span>
+                        </button>
+                      </div>
+                      <!-- === Toast éxito Fin === -->
+
+                      <!-- === Toast danger === -->
+                      <!-- <div
+                        id="dangerConfigToast"
+                        class="toast toast-danger"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                      >
+                        <span
+                        class="material-symbols-outlined"
+                        aria-hidden="true"
+                        >
+                        error
+                        </span>
+                        <span class="toast-content__text"
+                        >Ha ocurrido un error, intenta nuevamente</span
+                        >
+                        <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Cerrar"
+                        >
+                        <span
+                            class="material-symbols-outlined"
+                            aria-hidden="true"
+                        >
+                            close
+                        </span>
+                        </button>
+                      </div> -->
+                      <!-- === Toast danger Fin === -->
+                    </div>
+                  </div>
+                  <!-- ====== Toast Fin ====== -->
+                  <div class="pb-4 d-flex box-btn-mobile">
                     <button
                       type="button"
-                      class="btn btn-primary btn-lg w-100 w-lg-auto ms-lg-auto"
+                      class="btn btn-primary btn-lg w-100 w-sm-auto ms-sm-auto"
+                      id="configToastBtn"
                     >
                       Guardar cambios
                     </button>
@@ -347,5 +407,36 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Toast script -->
+    <script>
+      const configToastTrigger = document.getElementById("configToastBtn");
+      const successConfigToast = document.getElementById("successConfigToast");
+      const dangerConfigToast = document.getElementById("dangerConfigToast");
+      const scrollToBottom = () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      };
+      if (configToastTrigger) {
+        if (successConfigToast) {
+          const successToastBootstrap =
+            bootstrap.Toast.getOrCreateInstance(successConfigToast);
+          configToastTrigger.addEventListener("click", () => {
+            successToastBootstrap.show();
+            scrollToBottom();
+          });
+        }
+        if (dangerConfigToast) {
+          const dangerToastBootstrap =
+            bootstrap.Toast.getOrCreateInstance(dangerConfigToast);
+          configToastTrigger.addEventListener("click", () => {
+            dangerToastBootstrap.show();
+            scrollToBottom();
+          });
+        }
+      }
+    </script>
   </body>
 </html>
