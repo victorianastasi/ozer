@@ -113,7 +113,8 @@
         <div class="row install-section">
           <div class="col-12 col-lg-6 install-section__item">
             <div class="section-qr">
-              <img src="../../img/qr_code.svg" alt="Código QR" />
+              <!-- <img src="../../img/qr_code.svg" alt="Código QR" /> -->
+              <div id="qrcode"></div>
             </div>
             <div class="section-authcode">
               <form action="">
@@ -177,5 +178,19 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+
+    <script>
+      const qrcode = new QRCode(document.getElementById('qrcode'), {
+        text: 'http://jindo.dev.naver.com/collie',
+        width: 150,
+        height: 150,
+        colorDark : '#000',
+        colorLight : '#fff',
+        correctLevel : QRCode.CorrectLevel.H
+      });
+    </script>
+
   </body>
 </html>
