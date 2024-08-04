@@ -67,6 +67,7 @@
   margin: 0;
   max-height: 1.5rem;
 }
+
 @media (min-width: 992px) {
   .contacts-container {
     border-radius: 1.5rem;
@@ -97,6 +98,9 @@
   .contacts-container.contacts-container-table td:nth-child(3) {
     min-width: 120px;
   }
+  .table-alias {
+    -webkit-line-clamp: 2 !important;
+  }
 }
 /* @media (min-width: 768px) {
   .contacts-container.contacts-container-table th:first-child,
@@ -115,6 +119,7 @@
 .offcanvas-contacts {
   background-color: var(--white);
 }
+
 @media (min-width: 992px) {
   .offcanvas.offcanvas-end.offcanvas-contacts {
     width: 544px;
@@ -187,4 +192,11 @@
 /* Edit contact offcanvas */
 .offcanvas-contacts .offcanvas-body .edit-contact-name {
   padding-bottom: 2rem;
+}
+
+.table-alias {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
