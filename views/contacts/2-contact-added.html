@@ -236,36 +236,46 @@
                 >
                   <thead>
                     <tr>
-                      <th scope="col">Alias</th>
-                      <th scope="col">Modo</th>
+                      <th scope="col"><span>Alias</span></th>
+                      <th scope="col"><span>Modo</span></th>
                       <th scope="col"></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Andrés Iniesta</td>
-                      <td>No transcribir</td>
                       <td>
-                        <button
-                          type="button"
-                          class="btn btn-icon"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          data-bs-title="Editar"
-                          data-bs-custom-class="custom-tooltip"
-                        >
-                          <span class="material-symbols-outlined text-primary">edit</span>
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-icon"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="right"
-                          data-bs-title="Eliminar"
-                          data-bs-custom-class="custom-tooltip"
-                        >
-                          <span class="material-symbols-outlined text-danger">delete</span>
-                        </button>
+                        <span class="ellipsis-2">Andrés Iniesta</span>
+                      </td>
+                      <td>
+                        <span>No transcribir</span>
+                      </td>
+                      <td>
+                        <div class="contact-actions">
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-title="Editar"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <span class="material-symbols-outlined text-primary"
+                              >edit</span
+                            >
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="right"
+                            data-bs-title="Eliminar"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <span class="material-symbols-outlined text-danger"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -380,6 +390,35 @@
             </div>
           </div>
         </div>
+        <!-- === Toast éxito Contacto agregado === -->
+        <div
+          class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
+        >
+          <div
+            id="successConfigToast"
+            class="toast toast-success show"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <!-- A modo ilustrativo, para que pueda visualizarse en la pantalla, se coloca la clase show. Retirar luego ya que el toast será desencadenado por el botón del formulario 'Agregar contacto' -->
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text">Contacto agregado con éxito</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <!-- === Toast éxito Contacto agregado Fin === -->
+        </div>
       </section>
     </main>
 
@@ -399,5 +438,8 @@
     <script src="../../js/contact-form-validation.js"></script>
     <!-- Tooltip -->
     <script src="../../js/tooltip.js"></script>
+    <!-- Toast script -->
+    <!-- Se debe adaptar que el toast sea desencadenado por el botón del formulario 'Agregar contacto', luego de que el contacto se haya agregado correctamente -->
+    <script src="../../js/toast.js"></script>
   </body>
 </html>
