@@ -44,6 +44,7 @@
   padding-left: 23px;
   cursor: pointer;
   width: fit-content;
+  position: relative;
 }
 .form-check:not(:last-child) {
   margin-bottom: 0.5rem;
@@ -119,9 +120,11 @@
 .form-check-input.is-invalid ~ .invalid-feedback {
   display: block;
   flex-grow: 1;
-  width: 100%;
+  width: 250px;
   margin-left: -23px;
-  margin-top: 0.75rem;
+  margin-top: 0;
+  position: absolute;
+  bottom: -32px;
 }
 
 /* Buscador */
@@ -133,6 +136,7 @@
   top: 83.8px;
   background-color: var(--white);
   width: 100%;
+  z-index: 1;
 }
 .suggestions .suggestion-list,
 .suggestions .no-results {

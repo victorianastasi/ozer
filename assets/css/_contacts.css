@@ -98,7 +98,20 @@
     min-width: 120px;
   }
 }
-
+/* @media (min-width: 768px) {
+  .contacts-container.contacts-container-table th:first-child,
+  .contacts-container.contacts-container-table td:nth-child(1) {
+    min-width: 240px;
+  }
+  .contacts-container.contacts-container-table th:nth-child(2),
+  .contacts-container.contacts-container-table td:nth-child(2) {
+    min-width: 246px;
+  }
+  .contacts-container.contacts-container-table th:nth-child(3),
+  .contacts-container.contacts-container-table td:nth-child(3) {
+    min-width: 120px;
+  }
+} */
 .offcanvas-contacts {
   background-color: var(--white);
 }
@@ -169,4 +182,9 @@
   .offcanvas-contacts .offcanvas-body .btn-primary {
     width: inherit;
   }
+}
+
+/* Edit contact offcanvas */
+.offcanvas-contacts .offcanvas-body .edit-contact-name {
+  padding-bottom: 2rem;
 }
