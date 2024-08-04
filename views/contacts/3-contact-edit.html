@@ -188,7 +188,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                   <a class="nav-link" href="#"> <!-- Agregar la clase active para grupo -->
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
                       aria-hidden="true"
@@ -212,8 +212,10 @@
               <div class="contacts-container custom-flex">
                 <div>
                   <h1 class="mb-0 h4">Configuración de contactos</h1>
+                  <!-- <h1 class="mb-0 h4">Configuración de grupos</h1> -->
                   <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
+                    <!-- <strong>Modo de transcripción para grupos:</strong> -->
                     Transcribir en el mismo chat
                   </p>
                 </div>
@@ -226,6 +228,7 @@
                     aria-controls="offcanvasContacts"
                   >
                     Agregar contacto
+                    <!-- Agregar grupo -->
                   </button>
                 </div>
               </div>
@@ -446,7 +449,7 @@
                 </table>
               </div>
               <!-- Contenido fin -->
-              <!-- Offcanvas Contacts -->
+              <!-- Offcanvas Contacts / Groups -->
               <div
                 class="offcanvas offcanvas-end offcanvas-contacts"
                 tabindex="-1"
@@ -456,6 +459,7 @@
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
                     Agregar contacto
+                    <!-- Agregar grupo -->
                   </h5>
                   <button
                     type="button"
@@ -471,13 +475,14 @@
                 <div class="offcanvas-body">
                   <form action="" class="contactForm" id="contactForm">
                     <div>
-                      <!-- INICIO Buscador de contacto -->
+                      <!-- INICIO Buscador -->
                       <div class="nameContacts">
                         <label
                           for="contactSearchInput"
                           class="form-label body-2"
-                          >Nombre del contacto *</label
-                        >
+                          >Nombre del contacto *
+                          <!-- Nombre del grupo * -->
+                          </label>
                         <input
                           type="search"
                           class="form-control"
@@ -494,12 +499,14 @@
                           id="contactSearchInputFeedback"
                         >
                           Tienes que seleccionar un contacto
+                          <!-- Tienes que seleccionar un grupo -->
                         </p>
                       </div>
                       <!-- FIN Buscador de contacto -->
                       <div class="body-2">
                         <p class="form-subtitle">
                           Modo de transcripción para contactos *
+                          <!-- Modo de transcripción para grupos * -->
                         </p>
                         <div class="form-check">
                           <input
@@ -546,22 +553,27 @@
                       <button class="btn btn-lg btn-primary" type="submit">
                         Agregar contacto
                       </button>
+                      <!-- <button class="btn btn-lg btn-primary" type="submit">
+                        Agregar grupo
+                      </button> -->
                     </div>
                   </form>
                 </div>
               </div>
               <!-- Offcanvas Contacts Fin -->
-              <!-- Offcanvas Edit contact -->
+              <!-- Offcanvas Edit -->
               <div
                 class="offcanvas offcanvas-end offcanvas-contacts"
                 tabindex="-1"
                 id="offcanvasEditContact"
-                aria-labelledby="offcanvasEditContactLabel"
-              >
+                 aria-labelledby="offcanvasEditContactLabel"> <!--modificar los id con aria-label -->              
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
                     Editar contacto
                   </h5>
+                  <!-- <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
+                    Editar grupo
+                  </h5> -->
                   <button
                     type="button"
                     class="btn-close"
@@ -645,11 +657,11 @@
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Editar contacto Fin -->
+              <!-- Offcanvas Editar Fin -->
             </div>
           </div>
         </div>
-        <!-- === Toast éxito Contacto editado === -->
+        <!-- === Toast éxito editado === -->
         <div
           class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
         >
@@ -675,7 +687,7 @@
               </span>
             </button>
           </div>
-          <!-- === Toast éxito Contacto editado Fin === -->
+          <!-- === Toast éxito editado Fin === -->
         </div>
       </section>
     </main>
@@ -690,11 +702,11 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-    <!-- Buscador de Contacto -->
+    <!-- Buscador -->
     <script src="../../js/search-contact.js"></script>
-    <!-- Validación de formulario - Agregar contacto -->
+    <!-- Validación de formulario - Agregar -->
     <script src="../../js/form-validation-contact.js"></script>
-    <!-- Validación de formulario - Editar contacto -->
+    <!-- Validación de formulario - Editar -->
     <script src="../../js/form-validation-contact-edit.js"></script>
     <!-- Tooltip -->
     <script src="../../js/tooltip.js"></script>

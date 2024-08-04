@@ -188,7 +188,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                   <a class="nav-link" href="#"><!-- Agregar la clase active para grupos-->
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
                       aria-hidden="true"
@@ -212,6 +212,7 @@
               <div class="contacts-container custom-flex">
                 <div>
                   <h1 class="mb-0 h4">Configuración de contactos</h1>
+                  <!-- <h1 class="mb-0 h4">Configuración de grupos</h1> -->
                   <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
                     Transcribir en el mismo chat
@@ -226,6 +227,7 @@
                     aria-controls="offcanvasContacts"
                   >
                     Agregar contacto
+                    <!-- Agregar grupo -->
                   </button>
                 </div>
               </div>
@@ -282,7 +284,7 @@
                 </table>
               </div>
               <!-- Contenido fin -->
-              <!-- Offcanvas Contacts -->
+              <!-- Offcanvas Contacts / Groups -->
               <div
                 class="offcanvas offcanvas-end offcanvas-contacts"
                 tabindex="-1"
@@ -293,6 +295,9 @@
                   <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
                     Agregar contacto
                   </h5>
+                  <!-- <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
+                    Agregar grupo
+                  </h5> -->
                   <button
                     type="button"
                     class="btn-close"
@@ -312,8 +317,9 @@
                         <label
                           for="contactSearchInput"
                           class="form-label body-2"
-                          >Nombre del contacto *</label
-                        >
+                          >Nombre del contacto *
+                          <!-- Nombre del grupo * -->
+                        </label>
                         <input
                           type="search"
                           class="form-control"
@@ -321,6 +327,7 @@
                           aria-describedby="contactSearchInputFeedback"
                           placeholder="Ingresa el nombre del contacto"
                         />
+                        <!-- modificar el placeholder por grupo -->
                         <div
                           id="suggestionsContainer"
                           class="suggestions"
@@ -331,12 +338,18 @@
                         >
                           Tienes que seleccionar un contacto
                         </p>
+                        <!-- <p class="invalid-feedback" id="contactSearchInputFeedback">
+                        Tienes que seleccionar un grupo
+                      </p> -->
                       </div>
-                      <!-- FIN Buscador de contacto -->
+                      <!-- FIN Buscador de contacto/grupo -->
                       <div class="body-2">
                         <p class="form-subtitle">
                           Modo de transcripción para contactos *
                         </p>
+                        <!-- <p class="form-subtitle">
+                          Modo de transcripción para grupos *
+                        </p> -->
                         <div class="form-check">
                           <input
                             class="form-check-input"
@@ -382,15 +395,18 @@
                       <button class="btn btn-lg btn-primary" type="submit">
                         Agregar contacto
                       </button>
+                      <!-- <button class="btn btn-lg btn-primary" type="submit">
+                        Agregar grupo
+                      </button> -->
                     </div>
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Contacts Fin -->
+              <!-- Offcanvas Contacts/Groups Fin -->
             </div>
           </div>
         </div>
-        <!-- === Toast éxito Contacto agregado === -->
+        <!-- === Toast éxito agregado === -->
         <div
           class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
         >
@@ -417,7 +433,7 @@
               </span>
             </button>
           </div>
-          <!-- === Toast éxito Contacto agregado Fin === -->
+          <!-- === Toast éxito agregado Fin === -->
         </div>
       </section>
     </main>
@@ -432,9 +448,9 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-    <!-- Buscador de Contacto -->
+    <!-- Buscador -->
     <script src="../../js/search-contact.js"></script>
-    <!-- Validación de formulario - Agregar contacto -->
+    <!-- Validación de formulario - Agregar -->
     <script src="../../js/form-validation-contact.js"></script>
     <!-- Tooltip -->
     <script src="../../js/tooltip.js"></script>

@@ -188,6 +188,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <!-- agregar clase active para grupos -->
                   <a class="nav-link" href="#">
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
@@ -212,6 +213,7 @@
               <div class="contacts-container custom-flex">
                 <div>
                   <h1 class="mb-0 h4">Configuración de contactos</h1>
+                  <!-- Agregar titulo para grupos: <h1 class="mb-0 h4">Configuración de grupos</h1> -->
                   <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
                     Transcribir en el mismo chat
@@ -232,10 +234,13 @@
                     <h2 class="mb-2 h5 fw-normal contacts-subtitle">
                         Agrega contactos y crea configuraciones de transcripción
                         personalizadas
+                        <!-- Agrega grupos y crea configuraciones 
+                          de transcripción personalizadas -->
                       </h2>
                       <p class="mb-0 body-2 text-secondary">
                         Si quieres tener una configuración diferente puedes agregar
                         contactos y personalizar las transcripciones de cada chat
+                        <!-- Si quieres tener una configuración diferente puedes agregar grupos y personalizar las transcripciones de cada chat -->
                       </p>
                 </div>
                 
@@ -247,6 +252,7 @@
                   aria-controls="offcanvasContacts"
                 >
                   Agregar contacto
+                  <!-- Agregar grupo -->
                 </button>
               </div>
               <!-- Contenido fin -->
@@ -261,6 +267,9 @@
                   <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
                     Agregar contacto
                   </h5>
+                  <!-- <h5 class="offcanvas-title h5" id=""> id relacionado al offcanva correspondiente
+                    Agregar grupo
+                  </h5> -->
                   <button
                     type="button"
                     class="btn-close"
@@ -280,8 +289,8 @@
                         <label
                           for="contactSearchInput"
                           class="form-label body-2"
-                          >Nombre del contacto *</label
-                        >
+                           >Nombre del contacto * <!-- Nombre del grupo * -->
+                          </label>
                         <input
                           type="search"
                           class="form-control"
@@ -306,6 +315,9 @@
                         <p class="form-subtitle">
                           Modo de transcripción para contactos *
                         </p>
+                        <!-- <p class="form-subtitle">
+                          Modo de transcripción para grupos *
+                        </p> -->
                         <div class="form-check">
                           <input
                             class="form-check-input"
@@ -353,6 +365,9 @@
                       <button class="btn btn-lg btn-primary" type="submit">
                         Agregar contacto
                       </button>
+                      <!--  <button class="btn btn-lg btn-primary" type="submit">
+                        Agregar grupo
+                      </button> -->
                     </div>
                   </form>
                 </div>
