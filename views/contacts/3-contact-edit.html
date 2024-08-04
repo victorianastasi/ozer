@@ -254,12 +254,176 @@
                           <button
                             type="button"
                             class="btn btn-icon"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasEditContact"
+                            aria-controls="offcanvasEditContacts"
+                          >
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
+                              >edit</span
+                            >
+                          </button>
+                          <button type="button" class="btn btn-icon">
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="ellipsis-2">Adam Sandler</span>
+                      </td>
+                      <td>
+                        <span>No transcribir</span>
+                      </td>
+                      <td>
+                        <div class="contact-actions">
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasEditContact"
+                            aria-controls="offcanvasEditContacts"
+                          >
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
+                              >edit</span
+                            >
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-icon"
                             data-bs-toggle="tooltip"
-                            data-bs-placement="bottom"
-                            data-bs-title="Editar"
+                            data-bs-placement="right"
+                            data-bs-title="Eliminar"
                             data-bs-custom-class="custom-tooltip"
                           >
-                            <span class="material-symbols-outlined text-primary"
+                            <span class="material-symbols-outlined text-danger"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="ellipsis-2">Adele</span>
+                      </td>
+                      <td>
+                        <span>Transcribir en mi chat privado</span>
+                      </td>
+                      <td>
+                        <div class="contact-actions">
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasEditContact"
+                            aria-controls="offcanvasEditContacts"
+                          >
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
+                              >edit</span
+                            >
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="right"
+                            data-bs-title="Eliminar"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <span class="material-symbols-outlined text-danger"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="ellipsis-2">Alicia Keys</span>
+                      </td>
+                      <td>
+                        <span>No transcribir</span>
+                      </td>
+                      <td>
+                        <div class="contact-actions">
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasEditContact"
+                            aria-controls="offcanvasEditContacts"
+                          >
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
+                              >edit</span
+                            >
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="right"
+                            data-bs-title="Eliminar"
+                            data-bs-custom-class="custom-tooltip"
+                          >
+                            <span class="material-symbols-outlined text-danger"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="ellipsis-2"
+                          >Arnold Kevin Schwarzenegger Chamberlain</span
+                        >
+                      </td>
+                      <td>
+                        <span>No transcribir</span>
+                      </td>
+                      <td>
+                        <div class="contact-actions">
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasEditContact"
+                            aria-controls="offcanvasEditContacts"
+                          >
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
                               >edit</span
                             >
                           </button>
@@ -387,25 +551,119 @@
                 </div>
               </div>
               <!-- Offcanvas Contacts Fin -->
+              <!-- Offcanvas Edit contact -->
+              <div
+                class="offcanvas offcanvas-end offcanvas-contacts"
+                tabindex="-1"
+                id="offcanvasEditContact"
+                aria-labelledby="offcanvasEditContactLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
+                    Editar contacto
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Cerrar"
+                  >
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      close
+                    </span>
+                  </button>
+                </div>
+                <div class="offcanvas-body">
+                  <form action="" class="contactForm" id="editContactForm">
+                    <div>
+                      <div class="edit-contact-name">
+                        <p class="body-2 mb-1">Nombre del contacto *</p>
+                        <p class="body-2 mb-0 fw-bold">Andrés Iniesta</p>
+                      </div>
+                      <div class="body-2">
+                        <p class="form-subtitle">
+                          Modo de transcripción para contactos *
+                        </p>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="editContactRadio"
+                            id="editContactRadio1"
+                            aria-describedby="editContactRadioFeedback"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="editContactRadio1"
+                          >
+                            Transcribir en el mismo chat
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="editContactRadio"
+                            id="editContactRadio2"
+                            aria-describedby="editContactRadioFeedback"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="editContactRadio2"
+                          >
+                            Transcribir en mi chat privado
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="editContactRadio"
+                            id="editContactRadio3"
+                            aria-describedby="editContactRadioFeedback"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="editContactRadio3"
+                          >
+                            No transcribir
+                          </label>
+                          <p
+                            class="invalid-feedback"
+                            id="editContactRadioFeedback"
+                          >
+                            Tienes que seleccionar una opción
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <button class="btn btn-lg btn-primary" type="submit">
+                        Guardar cambios
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Offcanvas Editar contacto Fin -->
             </div>
           </div>
         </div>
-        <!-- === Toast éxito Contacto agregado === -->
+        <!-- === Toast éxito Contacto editado === -->
         <div
           class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
         >
           <div
-            id="addContactSuccessToast"
-            class="toast toast-success show"
+            id="editContactSuccessToast"
+            class="toast toast-success"
             role="alert"
             aria-live="assertive"
             aria-atomic="true"
           >
-            <!-- A modo ilustrativo, para que pueda visualizarse en la pantalla, se coloca la clase show. Retirar luego ya que el toast será desencadenado por el botón del formulario 'Agregar contacto' -->
             <span class="material-symbols-outlined" aria-hidden="true">
               check_circle
             </span>
-            <span class="toast-content__text">Contacto agregado con éxito</span>
+            <span class="toast-content__text">Cambios guardados con éxito</span>
             <button
               type="button"
               class="btn-close"
@@ -417,7 +675,7 @@
               </span>
             </button>
           </div>
-          <!-- === Toast éxito Contacto agregado Fin === -->
+          <!-- === Toast éxito Contacto editado Fin === -->
         </div>
       </section>
     </main>
@@ -436,10 +694,9 @@
     <script src="../../js/search-contact.js"></script>
     <!-- Validación de formulario - Agregar contacto -->
     <script src="../../js/form-validation-contact.js"></script>
+    <!-- Validación de formulario - Editar contacto -->
+    <script src="../../js/form-validation-contact-edit.js"></script>
     <!-- Tooltip -->
     <script src="../../js/tooltip.js"></script>
-    <!-- Toast script -->
-    <!-- Se debe adaptar que el toast sea desencadenado por el botón del formulario 'Agregar contacto', luego de que el contacto se haya agregado correctamente -->
-    <script src="../../js/toast.js"></script>
   </body>
 </html>
