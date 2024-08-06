@@ -1,5 +1,6 @@
 .modal {
   --bs-modal-width: 544px;
+  z-index: 1090;
 }
 .modal-dialog {
   --bs-modal-margin: 1rem;

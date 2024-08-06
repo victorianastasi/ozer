@@ -104,12 +104,14 @@
                     </span>
                   </a>
                   <hr />
+                  <!--  Desplegable de Idioma INICIO -->
                   <div class="dropdown">
                     <button
                       type="button"
                       class="btn dropdown-toggle"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      id="dropdownLanguageButton"
                     >
                       <div class="offcanvas-link__text">
                         <span
@@ -118,7 +120,7 @@
                         >
                           language
                         </span>
-                        <span>Español</span>
+                        <span id="dropdownLanguageButtonText">Español</span>
                       </div>
                       <span
                         class="material-symbols-outlined btn-dropdown-icon"
@@ -127,11 +129,28 @@
                         expand_more
                       </span>
                     </button>
-                    <ul class="dropdown-menu">
-                      <li><button class="dropdown-item">English</button></li>
-                      <li><button class="dropdown-item">Deutsch</button></li>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownLanguageButton"
+                    >
+                      <li>
+                        <button class="dropdown-item d-none" data-lang="es">
+                          Español
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="en">
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="de">
+                          Deutsch
+                        </button>
+                      </li>
                     </ul>
                   </div>
+                  <!--  Desplegable de Idioma FIN -->
                 </div>
               </div>
 
@@ -174,21 +193,21 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">
+                  <a class="nav-link" href="#">
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
                       aria-hidden="true"
                     >
                       person
                     </span>
-                    <span class="body-1 d-lg-none">Contactos</span>
+                    <span class="body-1 d-lg-none">grupos</span>
                     <span class="body-1 d-none d-lg-block"
-                      >Configuración de contactos</span
+                      >Configuración de grupos</span
                     >
                   </a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="#"> <!-- Agregar la clase active para grupo -->
+                  <a class="nav-link active" href="#">
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
                       aria-hidden="true"
@@ -209,14 +228,12 @@
           <!-- Contenido -->
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
-              <div class="contacts-container custom-flex">
+              <div class="data-container custom-flex">
                 <div>
-                  <h1 class="mb-0 h4">Configuración de contactos</h1>
-                  <!-- <h1 class="mb-0 h4">Configuración de grupos</h1> -->
+                  <h1 class="mb-0 h4">Configuración de grupos</h1>
                   <p class="mb-0 mt-1 body-3 text-secondary">
-                    <strong>Modo de transcripción para contactos:</strong>
-                    <!-- <strong>Modo de transcripción para grupos:</strong> -->
-                    Transcribir en el mismo chat
+                    <strong>Modo de transcripción para grupos:</strong>
+                    No transcribir
                   </p>
                 </div>
                 <div>
@@ -224,15 +241,14 @@
                     type="button"
                     class="btn btn-lg btn-primary"
                     data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasContacts"
-                    aria-controls="offcanvasContacts"
+                    data-bs-target="#offcanvasAddGroup"
+                    aria-controls="offcanvasAddGroup"
                   >
-                    Agregar contacto
-                    <!-- Agregar grupo -->
+                    Agregar grupo
                   </button>
                 </div>
               </div>
-              <div class="contacts-container contacts-container-table">
+              <div class="data-container data-container-table">
                 <table
                   class="table"
                   style="--bs-table-bg: transparent !important"
@@ -247,19 +263,19 @@
                   <tbody>
                     <tr>
                       <td>
-                        <span class="table-alias">Andrés Iniesta</span>
+                        <span class="table-alias">Familia</span>
                       </td>
                       <td>
-                        <span>No transcribir</span>
+                        <span>Transcribir en el mismo chat</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
+                        <div class="data-actions">
                           <button
                             type="button"
                             class="btn btn-icon"
                             data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
+                            data-bs-target="#offcanvasEditGroup"
+                            aria-controls="offcanvasEditGroup"
                           >
                             <span
                               class="material-symbols-outlined text-primary"
@@ -270,7 +286,12 @@
                               >edit</span
                             >
                           </button>
-                          <button type="button" class="btn btn-icon">
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteGroupModal"
+                          >
                             <span
                               class="material-symbols-outlined text-danger"
                               data-bs-toggle="tooltip"
@@ -285,20 +306,14 @@
                     </tr>
                     <tr>
                       <td>
-                        <span class="table-alias">Adam Sandler</span>
+                        <span class="table-alias">Fútbol</span>
                       </td>
                       <td>
-                        <span>No transcribir</span>
+                        <span>Transcribir en el mismo chat</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -311,12 +326,15 @@
                           <button
                             type="button"
                             class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteGroupModal"
                           >
-                            <span class="material-symbols-outlined text-danger"
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
                               >delete</span
                             >
                           </button>
@@ -325,20 +343,14 @@
                     </tr>
                     <tr>
                       <td>
-                        <span class="table-alias">Adele</span>
+                        <span class="table-alias">Consorcio</span>
                       </td>
                       <td>
                         <span>Transcribir en mi chat privado</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -351,52 +363,15 @@
                           <button
                             type="button"
                             class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
-                          >
-                            <span class="material-symbols-outlined text-danger"
-                              >delete</span
-                            >
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="table-alias">Alicia Keys</span>
-                      </td>
-                      <td>
-                        <span>No transcribir</span>
-                      </td>
-                      <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteGroupModal"
                           >
                             <span
-                              class="material-symbols-outlined text-primary"
+                              class="material-symbols-outlined text-danger"
                               data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              data-bs-title="Editar"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
                               data-bs-custom-class="custom-tooltip"
-                              >edit</span
-                            >
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
-                          >
-                            <span class="material-symbols-outlined text-danger"
                               >delete</span
                             >
                           </button>
@@ -406,21 +381,16 @@
                     <tr>
                       <td>
                         <span class="table-alias"
-                          >Arnold Kevin Schwarzenegger Chamberlain</span
+                          >Los mejores del mundo mundial - Campeones del
+                          mundo</span
                         >
                       </td>
                       <td>
-                        <span>No transcribir</span>
+                        <span>Transcribir en el mismo chat</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -433,12 +403,52 @@
                           <button
                             type="button"
                             class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteGroupModal"
                           >
-                            <span class="material-symbols-outlined text-danger"
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="table-alias">Primos</span>
+                      </td>
+                      <td>
+                        <span>Transcribir en el mismo chat</span>
+                      </td>
+                      <td>
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
+                              >edit</span
+                            >
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteGroupModal"
+                          >
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
                               >delete</span
                             >
                           </button>
@@ -449,17 +459,16 @@
                 </table>
               </div>
               <!-- Contenido fin -->
-              <!-- Offcanvas Contacts / Groups -->
+              <!-- Offcanvas Agregar Grupo -->
               <div
-                class="offcanvas offcanvas-end offcanvas-contacts"
+                class="offcanvas offcanvas-end offcanvas-data-form"
                 tabindex="-1"
-                id="offcanvasContacts"
-                aria-labelledby="offcanvasContactsLabel"
+                id="offcanvasAddGroup"
+                aria-labelledby="offcanvasAddGroupLabel"
               >
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
-                    Agregar contacto
-                    <!-- Agregar grupo -->
+                  <h5 class="offcanvas-title h5" id="offcanvasAddGroupLabel">
+                    Agregar grupo
                   </h5>
                   <button
                     type="button"
@@ -473,22 +482,19 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm" id="contactForm">
+                  <form action="" class="dataForm" id="addGroupForm">
                     <div>
-                      <!-- INICIO Buscador -->
-                      <div class="nameContacts">
-                        <label
-                          for="contactSearchInput"
-                          class="form-label body-2"
-                          >Nombre del contacto *
-                          <!-- Nombre del grupo * -->
-                          </label>
+                      <!-- INICIO Buscador de Grupo -->
+                      <div class="nameData">
+                        <label for="groupSearchInput" class="form-label body-2"
+                          >Nombre del Grupo *
+                        </label>
                         <input
                           type="search"
                           class="form-control"
-                          id="contactSearchInput"
-                          aria-describedby="contactSearchInputFeedback"
-                          placeholder="Ingresa el nombre del contacto"
+                          id="groupSearchInput"
+                          aria-describedby="groupSearchInputFeedback"
+                          placeholder="Ingresa el nombre del Grupo"
                         />
                         <div
                           id="suggestionsContainer"
@@ -496,27 +502,25 @@
                         ></div>
                         <p
                           class="invalid-feedback"
-                          id="contactSearchInputFeedback"
+                          id="groupSearchInputFeedback"
                         >
-                          Tienes que seleccionar un contacto
-                          <!-- Tienes que seleccionar un grupo -->
+                          Tienes que seleccionar un grupo
                         </p>
                       </div>
-                      <!-- FIN Buscador de contacto -->
+                      <!-- FIN Buscador de Grupo -->
                       <div class="body-2">
                         <p class="form-subtitle">
-                          Modo de transcripción para contactos *
-                          <!-- Modo de transcripción para grupos * -->
+                          Modo de transcripción para grupos *
                         </p>
                         <div class="form-check">
                           <input
                             class="form-check-input"
                             type="radio"
-                            name="contactRadio"
-                            id="contactRadio1"
-                            aria-describedby="contactRadioFeedback"
+                            name="groupRadio"
+                            id="groupRadio1"
+                            aria-describedby="groupRadioFeedback"
                           />
-                          <label class="form-check-label" for="contactRadio1">
+                          <label class="form-check-label" for="groupRadio1">
                             Transcribir en el mismo chat
                           </label>
                         </div>
@@ -524,11 +528,11 @@
                           <input
                             class="form-check-input"
                             type="radio"
-                            name="contactRadio"
-                            id="contactRadio2"
-                            aria-describedby="contactRadioFeedback"
+                            name="groupRadio"
+                            id="groupRadio2"
+                            aria-describedby="groupRadioFeedback"
                           />
-                          <label class="form-check-label" for="contactRadio2">
+                          <label class="form-check-label" for="groupRadio2">
                             Transcribir en mi chat privado
                           </label>
                         </div>
@@ -536,14 +540,14 @@
                           <input
                             class="form-check-input"
                             type="radio"
-                            name="contactRadio"
-                            id="contactRadio3"
-                            aria-describedby="contactRadioFeedback"
+                            name="groupRadio"
+                            id="groupRadio3"
+                            aria-describedby="groupRadioFeedback"
                           />
-                          <label class="form-check-label" for="contactRadio3">
+                          <label class="form-check-label" for="groupRadio3">
                             No transcribir
                           </label>
-                          <p class="invalid-feedback" id="contactRadioFeedback">
+                          <p class="invalid-feedback" id="groupRadioFeedback">
                             Tienes que seleccionar una opción
                           </p>
                         </div>
@@ -551,29 +555,25 @@
                     </div>
                     <div class="text-end">
                       <button class="btn btn-lg btn-primary" type="submit">
-                        Agregar contacto
+                        Agregar Grupo
                       </button>
-                      <!-- <button class="btn btn-lg btn-primary" type="submit">
-                        Agregar grupo
-                      </button> -->
                     </div>
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Contacts Fin -->
-              <!-- Offcanvas Edit -->
+              <!-- Offcanvas Agregar Grupo Fin -->
+
+              <!-- Offcanvas Editar Grupo -->
               <div
-                class="offcanvas offcanvas-end offcanvas-contacts"
+                class="offcanvas offcanvas-end offcanvas-data-form"
                 tabindex="-1"
-                id="offcanvasEditContact"
-                 aria-labelledby="offcanvasEditContactLabel"> <!--modificar los id con aria-label -->              
+                id="offcanvasEditGroup"
+                aria-labelledby="offcanvasEditGroupLabel"
+              >
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
-                    Editar contacto
+                  <h5 class="offcanvas-title h5" id="offcanvasEditGroupLabel">
+                    Editar Grupo
                   </h5>
-                  <!-- <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
-                    Editar grupo
-                  </h5> -->
                   <button
                     type="button"
                     class="btn-close"
@@ -586,28 +586,25 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm" id="editContactForm">
+                  <form action="" class="dataForm" id="editGroupForm">
                     <div>
-                      <div class="edit-contact-name">
-                        <p class="body-2 mb-1">Nombre del contacto *</p>
-                        <p class="body-2 mb-0 fw-bold">Andrés Iniesta</p>
+                      <div class="edit-form-name">
+                        <p class="body-2 mb-1">Nombre del grupo *</p>
+                        <p class="body-2 mb-0 fw-bold">Familia</p>
                       </div>
                       <div class="body-2">
                         <p class="form-subtitle">
-                          Modo de transcripción para contactos *
+                          Modo de transcripción para grupos *
                         </p>
                         <div class="form-check">
                           <input
                             class="form-check-input"
                             type="radio"
-                            name="editContactRadio"
-                            id="editContactRadio1"
-                            aria-describedby="editContactRadioFeedback"
+                            name="editGroupRadio"
+                            id="editGroupRadio1"
+                            aria-describedby="editGroupRadioFeedback"
                           />
-                          <label
-                            class="form-check-label"
-                            for="editContactRadio1"
-                          >
+                          <label class="form-check-label" for="editGroupRadio1">
                             Transcribir en el mismo chat
                           </label>
                         </div>
@@ -615,14 +612,11 @@
                           <input
                             class="form-check-input"
                             type="radio"
-                            name="editContactRadio"
-                            id="editContactRadio2"
-                            aria-describedby="editContactRadioFeedback"
+                            name="editGroupRadio"
+                            id="editGroupRadio2"
+                            aria-describedby="editGroupRadioFeedback"
                           />
-                          <label
-                            class="form-check-label"
-                            for="editContactRadio2"
-                          >
+                          <label class="form-check-label" for="editGroupRadio2">
                             Transcribir en mi chat privado
                           </label>
                         </div>
@@ -630,19 +624,16 @@
                           <input
                             class="form-check-input"
                             type="radio"
-                            name="editContactRadio"
-                            id="editContactRadio3"
-                            aria-describedby="editContactRadioFeedback"
+                            name="editGroupRadio"
+                            id="editGroupRadio3"
+                            aria-describedby="editGroupRadioFeedback"
                           />
-                          <label
-                            class="form-check-label"
-                            for="editContactRadio3"
-                          >
+                          <label class="form-check-label" for="editGroupRadio3">
                             No transcribir
                           </label>
                           <p
                             class="invalid-feedback"
-                            id="editContactRadioFeedback"
+                            id="editGroupRadioFeedback"
                           >
                             Tienes que seleccionar una opción
                           </p>
@@ -657,16 +648,82 @@
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Editar Fin -->
+              <!-- Offcanvas Editar Grupo Fin -->
+
+              <!-- Modal Eliminar Grupo -->
+              <div
+                class="modal fade"
+                id="deleteGroupModal"
+                tabindex="-1"
+                aria-labelledby="deleteGroupModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <p class="h5 mb-2">
+                        ¿Quieres eliminar la configuración de Familia?
+                      </p>
+                      <p class="mb-0">
+                        Estás a punto de eliminar la configuración de uno de tus grupos. Para personalizar la configuración de este grupo tendrás que volver a agregarlo al listado
+                      </p>
+                    </div>
+                    <div class="modal-footer border-none">
+                      <button
+                        type="button"
+                        class="btn btn-lg btn-outline-primary outline-none me-1"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-lg btn-danger"
+                        id="deleteGroupBtn"
+                        data-bs-dismiss="modal"
+                      >
+                        Si, eliminar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal Eliminar Grupo Fin -->
             </div>
           </div>
         </div>
-        <!-- === Toast éxito editado === -->
+        <!-- === Toast  === -->
+
         <div
           class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
         >
+          <!-- === Toast éxito Agregar Grupo === -->
           <div
-            id="editContactSuccessToast"
+            id="addGroupSuccessToast"
+            class="toast toast-success"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text">Grupo agregado con éxito</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+
+          <!-- === Toast éxito Editar Grupo === -->
+          <div
+            id="editGroupSuccessToast"
             class="toast toast-success"
             role="alert"
             aria-live="assertive"
@@ -687,8 +744,59 @@
               </span>
             </button>
           </div>
-          <!-- === Toast éxito editado Fin === -->
+          <!-- === Toast éxito Editar Grupo Fin === -->
+          <!-- === Toast error Editar Grupo === -->
+          <div
+            id="editGroupErrorToast"
+            class="toast toast-danger"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text"
+              >Ha ocurrido un error, intenta nuevamente</span
+            >
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <!-- === Toast error Editar Grupo Fin === -->
+          <!-- === Toast éxito Grupo eliminado === -->
+          <div
+            id="deleteGroupToast"
+            class="toast toast-success"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text">Grupo eliminado</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <!-- === Toast éxito Grupo eliminado Fin === -->
         </div>
+        <!-- === Toast Fin  === -->
       </section>
     </main>
 
@@ -702,13 +810,17 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
     <!-- Buscador -->
-    <script src="../../js/search-contact.js"></script>
+    <script src="../../js/search-group.js"></script>
     <!-- Validación de formulario - Agregar -->
-    <script src="../../js/form-validation-contact.js"></script>
+    <script src="../../js/form-validation-group-add.js"></script>
     <!-- Validación de formulario - Editar -->
-    <script src="../../js/form-validation-contact-edit.js"></script>
+    <script src="../../js/form-validation-group-edit.js"></script>
     <!-- Tooltip -->
     <script src="../../js/tooltip.js"></script>
+    <!-- Toast -->
+    <script src="../../js/toast.js"></script>
   </body>
 </html>

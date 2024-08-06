@@ -1,8 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contactForm");
+  const contactForm = document.getElementById("addContactForm");
   const contactSearchInput = document.getElementById("contactSearchInput");
   const contactRadios = document.getElementsByName("contactRadio");
   const contactRadioFeedback = document.getElementById("contactRadioFeedback");
+
+  // Variables de toast de éxito
+  const addContactSuccessToast = document.getElementById(
+    "addContactSuccessToast"
+  );
+  const addContactSuccessToastBootstrap = bootstrap.Toast.getOrCreateInstance(
+    addContactSuccessToast
+  );
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
+  //Offcanvas
+  const offcanvasElementAddContact = document.getElementById(
+    "offcanvasAddContact"
+  );
+  const offcanvasInstanceAddContact = new bootstrap.Offcanvas(
+    offcanvasElementAddContact
+  );
 
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -31,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Se agregan clases a inputs radio y texto de radio en caso de ser inválidos
     if (!radioChecked) {
       contactRadioFeedback.style.display = "block";
-      console.log(contactRadios);
       for (const radio of contactRadios) {
         radio.classList.add("is-invalid");
       }
@@ -43,12 +64,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    // Restablecer los campos del formulario
+    function resetFormInputs() {
+      contactForm.reset();
+
+      // Eliminación de las clases is-invalid
+      contactSearchInput.classList.remove("is-invalid");
+      for (const radio of contactRadios) {
+        radio.classList.remove("is-invalid");
+      }
+      contactRadioFeedback.style.display = "none";
+    }
+
     // Envio del formulario si todos los campos son válidos
     if (isValid) {
-      console.log("Formulario válido, enviando...");
-      this.submit();
+      console.log("Formulario válido");
+      if (offcanvasInstanceAddContact) {
+        offcanvasInstanceAddContact.hide();
+      }
+      if (addContactSuccessToastBootstrap) {
+        addContactSuccessToastBootstrap.show();
+      }
+      scrollToBottom();
+      resetFormInputs();
+      /* this.submit(); */
     } else {
-      console.log("Formulario inválido, no se envía.");
+      console.log("Formulario inválido");
     }
   });
   // Eliminar la clase is-invalid al hacer focus en los inputs

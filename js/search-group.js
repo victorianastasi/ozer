@@ -1,14 +1,12 @@
-/* Buscador de Contacto  */
 document.addEventListener("DOMContentLoaded", function () {
   const items = [
-    "Andrés Iniesta",
-    "Adam Sandler",
-    "Adele",
-    "Arnold Schwarzenegger",
-    "Alicia Keys",
+    "Familia",
+    "Fútbol",
+    "Consorcio",
+    "Los mejores del mundo mundial - Campeones del mundo",
+    "Primos",
   ];
-
-  const searchInput = document.getElementById("contactSearchInput");
+  const searchInput = document.getElementById("groupSearchInput");
   const suggestionsContainer = document.getElementById("suggestionsContainer");
 
   let suggestionSelected = false;

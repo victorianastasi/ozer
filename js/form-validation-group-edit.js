@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("editContactForm");
-  const contactRadios = document.getElementsByName("editContactRadio");
-  const contactRadioFeedback = document.getElementById(
-    "editContactRadioFeedback"
+  const groupForm = document.getElementById("editGroupForm");
+  const groupRadios = document.getElementsByName("editGroupRadio");
+  const groupRadioFeedback = document.getElementById(
+    "editGroupRadioFeedback"
   );
 
   // Variables de toast de éxito
-  const editContactSuccessToast = document.getElementById(
-    "editContactSuccessToast"
+  const editGroupSuccessToast = document.getElementById(
+    "editGroupSuccessToast"
   );
   const successToastBootstrap = bootstrap.Toast.getOrCreateInstance(
-    editContactSuccessToast
+    editGroupSuccessToast
   );
   const scrollToBottom = () => {
     window.scrollTo({
@@ -20,17 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   //Offcanvas
-  const offcanvasElement = document.getElementById("offcanvasEditContact");
+  const offcanvasElement = document.getElementById("offcanvasEditGroup");
   const offcanvasInstance = new bootstrap.Offcanvas(offcanvasElement);
 
-  contactForm.addEventListener("submit", function (event) {
+  groupForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let isValid = true;
 
     // Validación de los inputs radio
     let radioChecked = false;
-    for (const radio of contactRadios) {
+    for (const radio of groupRadios) {
       if (radio.checked) {
         radioChecked = true;
         break;
@@ -41,24 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Se agregan clases a inputs radio y texto de radio en caso de ser inválidos
     if (!radioChecked) {
-      contactRadioFeedback.style.display = "block";
-      for (const radio of contactRadios) {
+      groupRadioFeedback.style.display = "block";
+      for (const radio of groupRadios) {
         radio.classList.add("is-invalid");
       }
       isValid = false;
     } else {
-      contactRadioFeedback.style.display = "none";
-      for (const radio of contactRadios) {
+      groupRadioFeedback.style.display = "none";
+      for (const radio of groupRadios) {
         radio.classList.remove("is-invalid");
       }
     }
     // Restablecer los campos del formulario
     function resetFormInputs() {
-      contactForm.reset();
-      for (const radio of contactRadios) {
+      groupForm.reset();
+      for (const radio of groupRadios) {
         radio.classList.remove("is-invalid");
       }
-      contactRadioFeedback.style.display = "none";
+      groupRadioFeedback.style.display = "none";
     }
 
     // Envio del formulario si todos los campos son válidos
@@ -75,12 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Eliminar la clase is-invalid al hacer focus en los radios
-  contactRadios.forEach((radio) => {
+  groupRadios.forEach((radio) => {
     radio.addEventListener("focus", function () {
-      contactRadios.forEach((radio) => {
+      groupRadios.forEach((radio) => {
         radio.classList.remove("is-invalid");
       });
-      contactRadioFeedback.style.display = "none";
+      groupRadioFeedback.style.display = "none";
     });
   });
 });
