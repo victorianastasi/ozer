@@ -131,17 +131,10 @@
       <section class="container">
         <div class="row install-section">
           <div class="col-12 nav-sections">
-             <div class="section-qr">            
-              <div id="qrcode"></div>
-            </div> 
-            <div class="alternative-option">
-              <small>Opción alternativa</small>
-              <a href="">Usar código numérico</a>
-            </div>
-          <!--  <div class="section-authcode">
+            <div class="section-authcode">
               <form action="">
                 <div>
-                  <label class="mb-2 d-block" for="authcode"
+                  <label class="mb-2 d-block text-center" for="authcode"
                     >Código de autenticación</label
                   >
                   <input
@@ -153,7 +146,11 @@
                   />
                 </div>
               </form>
-            </div>-->
+            </div>
+            <div class="text-center">
+              <small>Opción alternativa</small><br>
+              <a href="#">Usar código numérico</a>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -166,11 +163,8 @@
                 <li>Pulsar en : (3 puntitos)</li>
                 <li>Dispositivos vinculados</li>
                 <li>Vincular dispositivo</li>
-                <li class="d-lg-none">Vincular con el número de teléfono</li>
-                <li class="d-lg-none">
-                  Insertar el código que aparece al inicio de esta pantalla
-                </li>
-                <li class="item-mobile">Apuntar la cámara al código QR</li>
+                <li>Vincular con el número de teléfono</li>
+                <li>Insertar el código que aparece al inicio de esta pantalla</li>
               </ol>
             </div>
           </div>
@@ -183,11 +177,10 @@
                 <li>Pulsar en : (3 puntitos)</li>
                 <li>Dispositivos vinculados</li>
                 <li>Vincular dispositivo</li>
-                <li class="d-lg-none">Vincular con el número de teléfono</li>
-                <li class="d-lg-none">
+                <li>Vincular con el número de teléfono</li>
+                <li>
                   Insertar el código que aparece al inicio de esta pantalla
                 </li>
-                <li class="item-mobile">Apuntar la cámara al código QR</li>
               </ol>
             </div>
           </div>
@@ -207,17 +200,6 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-
-    <script>
-      const qrcode = new QRCode(document.getElementById('qrcode'), {
-        text: 'http://jindo.dev.naver.com/collie',
-        width: 180,
-        height: 180,
-        colorDark : '#000',
-        colorLight : '#fff',
-        correctLevel : QRCode.CorrectLevel.H
-      });
-    </script>
     <!-- Desplegable de Idioma -->
     <script src="../../js/language.js"></script>
   </body>

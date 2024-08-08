@@ -12,12 +12,6 @@
 .nav-sections ol {
   padding-left: 1rem;
 }
-.nav-sections ol .item-mobile {
-  display: none;
-}
-.alternative-option{
-  color: var(--text-main-color);
-}
 @media screen and (min-width: 992px) {
   .nav-sections ol .item-mobile {
     display: list-item;
