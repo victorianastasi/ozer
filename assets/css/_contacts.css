@@ -182,12 +182,18 @@
   padding-bottom: 2rem;
 }
 
-/* Truncamiento de texto en tabla a 2 líneas */
+/* Truncamiento de texto en tabla a 2 líneas en desktop y 3 lineas en mobile */
 .table-alias {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+@media (min-width: 992px) {
+  .table-alias {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
 }
