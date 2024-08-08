@@ -62,12 +62,14 @@
             </div>
             <div class="offcanvas-body">
               <div class="offcanvas-container-top">
+                <!--  Desplegable de Idioma INICIO -->
                 <div class="dropdown">
                   <button
                     type="button"
                     class="btn dropdown-toggle"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    id="dropdownLanguageButton"
                   >
                     <div class="offcanvas-link__text">
                       <span
@@ -76,7 +78,7 @@
                       >
                         language
                       </span>
-                      <span>Español</span>
+                      <span id="dropdownLanguageButtonText">Español</span>
                     </div>
                     <span
                       class="material-symbols-outlined btn-dropdown-icon"
@@ -85,11 +87,28 @@
                       expand_more
                     </span>
                   </button>
-                  <ul class="dropdown-menu">
-                    <li><button class="dropdown-item">English</button></li>
-                    <li><button class="dropdown-item">Deutsch</button></li>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownLanguageButton"
+                  >
+                    <li>
+                      <button class="dropdown-item d-none" data-lang="es">
+                        Español
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" data-lang="en">
+                        English
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" data-lang="de">
+                        Deutsch
+                      </button>
+                    </li>
                   </ul>
                 </div>
+                <!--  Desplegable de Idioma FIN -->
               </div>
               <div class="offcanvas-container-bottom">
                 <button class="offcanvas-logout" aria-label="Cerrar sesión">
@@ -199,6 +218,7 @@
         correctLevel : QRCode.CorrectLevel.H
       });
     </script>
-
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
   </body>
 </html>

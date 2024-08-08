@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="../../img/logo.svg" alt="Ozer.bot" />
+          </a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasHeader"
+            aria-controls="offcanvasHeader"
+            aria-label="Menú"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              menu
+            </span>
+          </button>
+          <div
+            class="offcanvas-lg offcanvas-end"
+            tabindex="-1"
+            id="offcanvasHeader"
+            aria-labelledby="offcanvasHeaderLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#offcanvasHeader"
+                aria-label="Cerrar"
+              >
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  close
+                </span>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <div class="offcanvas-container-top">
+                  <!--  Desplegable de Idioma INICIO -->
+                  <div class="dropdown">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      id="dropdownLanguageButton"
+                    >
+                      <div class="offcanvas-link__text">
+                        <span
+                          class="material-symbols-outlined d-lg-none"
+                          aria-hidden="true"
+                        >
+                          language
+                        </span>
+                        <span id="dropdownLanguageButtonText">Español</span>
+                      </div>
+                      <span
+                        class="material-symbols-outlined btn-dropdown-icon"
+                        aria-hidden="true"
+                      >
+                        expand_more
+                      </span>
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownLanguageButton"
+                    >
+                      <li>
+                        <button class="dropdown-item d-none" data-lang="es">
+                          Español
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="en">
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="de">
+                          Deutsch
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--  Desplegable de Idioma FIN -->
+                </div>
+              </div>
+
+              <div class="offcanvas-container-bottom">
+                <button class="offcanvas-logout" aria-label="Cerrar sesión">
+                  <span class="d-lg-none">Cerrar sesión</span>
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    logout
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-container position-relative">
+      <section class="container padding-x-sm-none mt-4">
+        <div class="row install-section">
+          <!-- Contenido -->
+          <div
+            class="col-12 col-lg-6 install-section__item mb-lg-3 mx-auto"
+            id="waitlistFormContent"
+          >
+            <div class="pb-0">
+              <div class="data-container custom-flex">
+                <div>
+                  <h1 class="mb-0 h3">Únete a la lista de espera</h1>
+                  <p class="mb-0 mt-2 subtitle-2">
+                    Déjanos tus datos de contacto y te avisaremos cuando puedas
+                    probar las transcripciones de Ozer
+                  </p>
+                </div>
+                <form action="" class="waitlistForm col-12" id="waitlistForm">
+                  <div>
+                    <div class="nameData col-12 mt-3">
+                      <label for="mailInput" class="waitlistForm__label"
+                        >Correo electrónico *
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="mailInput"
+                        aria-describedby="mailInputFeedback"
+                        placeholder="name@example.com"
+                      />
+                      <p class="invalid-feedback" id="mailInputFeedback">
+                        Tienes que completar este campo
+                      </p>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="mb-3 col-4">
+                        <span class="waitlistForm__label">País *</span>
+                        <div class="custom-select" id="codeCustomSelect">
+                          <select id="codeSelect">
+                            <option value="">&nbsp;</option>
+                            <option value="+54">AR+54</option>
+                            <option value="+54">AR+54</option>
+                            <option value="+54">AR+54</option>
+                            <option value="+54">AR+54</option>
+                            <option value="+54">AR+54</option>
+                          </select>
+                        </div>
+                        <p class="invalid-feedback" id="codeSelectFeedback">
+                          Tienes que completar este campo
+                        </p>
+                      </div>
+                      <div class="mb-3 col-8">
+                        <label for="phoneInput" class="waitlistForm__label"
+                          >Número de teléfono *</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="phoneInput"
+                        />
+                        <p class="invalid-feedback" id="phoneInputFeedback">
+                          Tienes que completar este campo
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <button class="btn btn-lg btn-primary" type="submit">
+                      Join waitlist
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Contenido fin -->
+          <!-- Contenido Éxito-->
+          <div
+            class="col-12 col-lg-6 install-section__item mb-lg-3 mx-auto d-none"
+            id="waitlistSuccessContent"
+          >
+            <div class="pb-0">
+              <div class="data-container custom-flex">
+                <div>
+                  <h1 class="mb-0 h3">
+                    <span class="d-block">🎉🎉🎉 </span>
+                    <span>¡Te has unido a la lista de espera!!</span>
+                  </h1>
+                  <p class="mb-0 mt-2 subtitle-2">
+                    Te avisaremos cuando puedas probar las transcripciones de
+                    Ozer
+                  </p>
+                  <div class="mt-4">
+                    <a href="#" class="btn btn-lg btn-outline-primary"
+                      >Ir al inicio</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contenido fin -->
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
+    <!-- Validación de formulario Waitlist  -->
+    <script src="../../js/form-waitlist.js"></script>
+  </body>
+</html>

@@ -104,12 +104,14 @@
                     </span>
                   </a>
                   <hr />
+                  <!--  Desplegable de Idioma INICIO -->
                   <div class="dropdown">
                     <button
                       type="button"
                       class="btn dropdown-toggle"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      id="dropdownLanguageButton"
                     >
                       <div class="offcanvas-link__text">
                         <span
@@ -118,7 +120,7 @@
                         >
                           language
                         </span>
-                        <span>Español</span>
+                        <span id="dropdownLanguageButtonText">Español</span>
                       </div>
                       <span
                         class="material-symbols-outlined btn-dropdown-icon"
@@ -127,11 +129,28 @@
                         expand_more
                       </span>
                     </button>
-                    <ul class="dropdown-menu">
-                      <li><button class="dropdown-item">English</button></li>
-                      <li><button class="dropdown-item">Deutsch</button></li>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownLanguageButton"
+                    >
+                      <li>
+                        <button class="dropdown-item d-none" data-lang="es">
+                          Español
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="en">
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="de">
+                          Deutsch
+                        </button>
+                      </li>
                     </ul>
                   </div>
+                  <!--  Desplegable de Idioma FIN -->
                 </div>
               </div>
 
@@ -188,7 +207,6 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <!-- agregar clase active para grupos -->
                   <a class="nav-link" href="#">
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
@@ -210,66 +228,58 @@
           <!-- Contenido -->
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
-              <div class="contacts-container custom-flex">
+              <div class="data-container custom-flex">
                 <div>
                   <h1 class="mb-0 h4">Configuración de contactos</h1>
-                  <!-- Agregar titulo para grupos: <h1 class="mb-0 h4">Configuración de grupos</h1> -->
                   <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
                     Transcribir en el mismo chat
                   </p>
                 </div>
               </div>
-              <div class="contacts-container contacts-container-data">
+              <div class="data-container data-container-data">
                 <div class="icon-container">
-                    <span
+                  <span
                     class="material-symbols-outlined text-info size-32"
                     aria-hidden="true"
                   >
                     person
                   </span>
                 </div>
-                
+
                 <div>
-                    <h2 class="mb-2 h5 fw-normal contacts-subtitle">
-                        Agrega contactos y crea configuraciones de transcripción
-                        personalizadas
-                        <!-- Agrega grupos y crea configuraciones 
-                          de transcripción personalizadas -->
-                      </h2>
-                      <p class="mb-0 body-2 text-secondary">
-                        Si quieres tener una configuración diferente puedes agregar
-                        contactos y personalizar las transcripciones de cada chat
-                        <!-- Si quieres tener una configuración diferente puedes agregar grupos y personalizar las transcripciones de cada chat -->
-                      </p>
+                  <h2 class="mb-2 h5 fw-normal contacts-subtitle">
+                    Agrega contactos y crea configuraciones de transcripción
+                    personalizadas
+                  </h2>
+                  <p class="mb-0 body-2 text-secondary">
+                    Si quieres tener una configuración diferente puedes agregar
+                    contactos y personalizar las transcripciones de cada chat
+                  </p>
                 </div>
-                
+
                 <button
                   type="button"
                   class="btn btn-lg btn-primary"
                   data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasContacts"
-                  aria-controls="offcanvasContacts"
+                  data-bs-target="#offcanvasAddContact"
+                  aria-controls="offcanvasAddContact"
                 >
                   Agregar contacto
-                  <!-- Agregar grupo -->
                 </button>
               </div>
               <!-- Contenido fin -->
-              <!-- Offcanvas Contacts -->
+              <!-- Offcanvas Agregar Contacto -->
               <div
-                class="offcanvas offcanvas-end offcanvas-contacts"
+                class="offcanvas offcanvas-end offcanvas-data-form"
                 tabindex="-1"
-                id="offcanvasContacts"
-                aria-labelledby="offcanvasContactsLabel"
+                id="offcanvasAddContact"
+                aria-labelledby="offcanvasAddContactLabel"
               >
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
+                  <h5 class="offcanvas-title h5" id="offcanvasAddContactLabel">
                     Agregar contacto
                   </h5>
-                  <!-- <h5 class="offcanvas-title h5" id=""> id relacionado al offcanva correspondiente
-                    Agregar grupo
-                  </h5> -->
                   <button
                     type="button"
                     class="btn-close"
@@ -282,22 +292,21 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm" id="contactForm">
+                  <form action="" class="dataForm" id="addContactForm">
                     <div>
                       <!-- INICIO Buscador de contacto -->
-                      <div class="nameContacts">
+                      <div class="nameData">
                         <label
                           for="contactSearchInput"
                           class="form-label body-2"
-                           >Nombre del contacto * <!-- Nombre del grupo * -->
-                          </label>
+                          >Nombre del contacto *
+                        </label>
                         <input
                           type="search"
                           class="form-control"
                           id="contactSearchInput"
                           aria-describedby="contactSearchInputFeedback"
                           placeholder="Ingresa el nombre del contacto"
-                          
                         />
                         <div
                           id="suggestionsContainer"
@@ -315,9 +324,6 @@
                         <p class="form-subtitle">
                           Modo de transcripción para contactos *
                         </p>
-                        <!-- <p class="form-subtitle">
-                          Modo de transcripción para grupos *
-                        </p> -->
                         <div class="form-check">
                           <input
                             class="form-check-input"
@@ -325,7 +331,6 @@
                             name="contactRadio"
                             id="contactRadio1"
                             aria-describedby="contactRadioFeedback"
-                            
                           />
                           <label class="form-check-label" for="contactRadio1">
                             Transcribir en el mismo chat
@@ -338,42 +343,65 @@
                             name="contactRadio"
                             id="contactRadio2"
                             aria-describedby="contactRadioFeedback"
-                            
                           />
                           <label class="form-check-label" for="contactRadio2">
                             Transcribir en mi chat privado
                           </label>
                         </div>
                         <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="contactRadio"
-                              id="contactRadio3"
-                              aria-describedby="contactRadioFeedback"
-                            />
-                            <label class="form-check-label" for="contactRadio3">
-                              No transcribir
-                            </label>
-                            <p class="invalid-feedback" id="contactRadioFeedback">
-                              Tienes que seleccionar una opción
-                            </p>
-                          </div>
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="contactRadio"
+                            id="contactRadio3"
+                            aria-describedby="contactRadioFeedback"
+                          />
+                          <label class="form-check-label" for="contactRadio3">
+                            No transcribir
+                          </label>
+                          <p class="invalid-feedback" id="contactRadioFeedback">
+                            Tienes que seleccionar una opción
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div class="text-end">
                       <button class="btn btn-lg btn-primary" type="submit">
                         Agregar contacto
                       </button>
-                      <!--  <button class="btn btn-lg btn-primary" type="submit">
-                        Agregar grupo
-                      </button> -->
                     </div>
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Contacts Fin -->
+              <!-- Offcanvas Agregar Contacto Fin -->
             </div>
+          </div>
+        </div>
+        <div
+          class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
+        >
+          <!-- === Toast éxito Agregar Contacto === -->
+          <div
+            id="addContactSuccessToast"
+            class="toast toast-success"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text">Contacto agregado con éxito</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -389,9 +417,9 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-    <!-- Buscador de Contacto -->
-    <script src="../../js/search-contact.js"></script>
-    <!-- Validación de formulario - Agregar contacto -->
-    <script src="../../js/form-validation-contact.js"></script>
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
+    <!-- Validación de formulario Agregar contacto - Buscador - Toast de éxito  -->
+    <script src="../../js/form-add-contact.js"></script>
   </body>
 </html>

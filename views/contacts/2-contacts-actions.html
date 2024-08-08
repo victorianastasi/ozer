@@ -104,12 +104,14 @@
                     </span>
                   </a>
                   <hr />
+                  <!--  Desplegable de Idioma INICIO -->
                   <div class="dropdown">
                     <button
                       type="button"
                       class="btn dropdown-toggle"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      id="dropdownLanguageButton"
                     >
                       <div class="offcanvas-link__text">
                         <span
@@ -118,7 +120,7 @@
                         >
                           language
                         </span>
-                        <span>Español</span>
+                        <span id="dropdownLanguageButtonText">Español</span>
                       </div>
                       <span
                         class="material-symbols-outlined btn-dropdown-icon"
@@ -127,11 +129,28 @@
                         expand_more
                       </span>
                     </button>
-                    <ul class="dropdown-menu">
-                      <li><button class="dropdown-item">English</button></li>
-                      <li><button class="dropdown-item">Deutsch</button></li>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownLanguageButton"
+                    >
+                      <li>
+                        <button class="dropdown-item d-none" data-lang="es">
+                          Español
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="en">
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="de">
+                          Deutsch
+                        </button>
+                      </li>
                     </ul>
                   </div>
+                  <!--  Desplegable de Idioma FIN -->
                 </div>
               </div>
 
@@ -188,7 +207,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="#"> <!-- Agregar la clase active para grupo -->
+                  <a class="nav-link" href="#">
                     <span
                       class="material-symbols-outlined d-none d-lg-block"
                       aria-hidden="true"
@@ -209,13 +228,11 @@
           <!-- Contenido -->
           <div class="col-12 col-lg-8 install-section__item mb-lg-3">
             <div class="pb-0">
-              <div class="contacts-container custom-flex">
+              <div class="data-container custom-flex">
                 <div>
                   <h1 class="mb-0 h4">Configuración de contactos</h1>
-                  <!-- <h1 class="mb-0 h4">Configuración de grupos</h1> -->
                   <p class="mb-0 mt-1 body-3 text-secondary">
                     <strong>Modo de transcripción para contactos:</strong>
-                    <!-- <strong>Modo de transcripción para grupos:</strong> -->
                     Transcribir en el mismo chat
                   </p>
                 </div>
@@ -224,15 +241,14 @@
                     type="button"
                     class="btn btn-lg btn-primary"
                     data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasContacts"
-                    aria-controls="offcanvasContacts"
+                    data-bs-target="#offcanvasAddContact"
+                    aria-controls="offcanvasAddContact"
                   >
                     Agregar contacto
-                    <!-- Agregar grupo -->
                   </button>
                 </div>
               </div>
-              <div class="contacts-container contacts-container-table">
+              <div class="data-container data-container-table">
                 <table
                   class="table"
                   style="--bs-table-bg: transparent !important"
@@ -253,14 +269,51 @@
                         <span>No transcribir</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
+                        <div class="data-actions">
                           <button
                             type="button"
                             class="btn btn-icon"
                             data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
+                            aria-controls="offcanvasEditContact"
                           >
+                            <span
+                              class="material-symbols-outlined text-primary"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Editar"
+                              data-bs-custom-class="custom-tooltip"
+                              >edit</span
+                            >
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-icon"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteContactModal"
+                          >
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
+                              >delete</span
+                            >
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="table-alias">Adam Sandler</span>
+                      </td>
+                      <td>
+                        <span>No transcribir</span>
+                      </td>
+                      <td>
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -285,60 +338,14 @@
                     </tr>
                     <tr>
                       <td>
-                        <span class="table-alias">Adam Sandler</span>
-                      </td>
-                      <td>
-                        <span>No transcribir</span>
-                      </td>
-                      <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
-                            <span
-                              class="material-symbols-outlined text-primary"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              data-bs-title="Editar"
-                              data-bs-custom-class="custom-tooltip"
-                              >edit</span
-                            >
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
-                          >
-                            <span class="material-symbols-outlined text-danger"
-                              >delete</span
-                            >
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
                         <span class="table-alias">Adele</span>
                       </td>
                       <td>
                         <span>Transcribir en mi chat privado</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -348,15 +355,13 @@
                               >edit</span
                             >
                           </button>
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
-                          >
-                            <span class="material-symbols-outlined text-danger"
+                          <button type="button" class="btn btn-icon">
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
                               >delete</span
                             >
                           </button>
@@ -371,14 +376,8 @@
                         <span>No transcribir</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -388,15 +387,13 @@
                               >edit</span
                             >
                           </button>
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
-                          >
-                            <span class="material-symbols-outlined text-danger"
+                          <button type="button" class="btn btn-icon">
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
                               >delete</span
                             >
                           </button>
@@ -413,14 +410,8 @@
                         <span>No transcribir</span>
                       </td>
                       <td>
-                        <div class="contact-actions">
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasEditContact"
-                            aria-controls="offcanvasEditContacts"
-                          >
+                        <div class="data-actions">
+                          <button type="button" class="btn btn-icon">
                             <span
                               class="material-symbols-outlined text-primary"
                               data-bs-toggle="tooltip"
@@ -430,15 +421,13 @@
                               >edit</span
                             >
                           </button>
-                          <button
-                            type="button"
-                            class="btn btn-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-title="Eliminar"
-                            data-bs-custom-class="custom-tooltip"
-                          >
-                            <span class="material-symbols-outlined text-danger"
+                          <button type="button" class="btn btn-icon">
+                            <span
+                              class="material-symbols-outlined text-danger"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-title="Eliminar"
+                              data-bs-custom-class="custom-tooltip"
                               >delete</span
                             >
                           </button>
@@ -449,17 +438,16 @@
                 </table>
               </div>
               <!-- Contenido fin -->
-              <!-- Offcanvas Contacts / Groups -->
+              <!-- Offcanvas Agregar Contacto -->
               <div
-                class="offcanvas offcanvas-end offcanvas-contacts"
+                class="offcanvas offcanvas-end offcanvas-data-form"
                 tabindex="-1"
-                id="offcanvasContacts"
-                aria-labelledby="offcanvasContactsLabel"
+                id="offcanvasAddContact"
+                aria-labelledby="offcanvasAddContactLabel"
               >
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title h5" id="offcanvasContactsLabel">
+                  <h5 class="offcanvas-title h5" id="offcanvasAddContactLabel">
                     Agregar contacto
-                    <!-- Agregar grupo -->
                   </h5>
                   <button
                     type="button"
@@ -473,16 +461,15 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm" id="contactForm">
+                  <form action="" class="dataForm" id="addContactForm">
                     <div>
-                      <!-- INICIO Buscador -->
-                      <div class="nameContacts">
+                      <!-- INICIO Buscador de contacto -->
+                      <div class="nameData">
                         <label
                           for="contactSearchInput"
                           class="form-label body-2"
                           >Nombre del contacto *
-                          <!-- Nombre del grupo * -->
-                          </label>
+                        </label>
                         <input
                           type="search"
                           class="form-control"
@@ -499,14 +486,12 @@
                           id="contactSearchInputFeedback"
                         >
                           Tienes que seleccionar un contacto
-                          <!-- Tienes que seleccionar un grupo -->
                         </p>
                       </div>
                       <!-- FIN Buscador de contacto -->
                       <div class="body-2">
                         <p class="form-subtitle">
                           Modo de transcripción para contactos *
-                          <!-- Modo de transcripción para grupos * -->
                         </p>
                         <div class="form-check">
                           <input
@@ -553,27 +538,23 @@
                       <button class="btn btn-lg btn-primary" type="submit">
                         Agregar contacto
                       </button>
-                      <!-- <button class="btn btn-lg btn-primary" type="submit">
-                        Agregar grupo
-                      </button> -->
                     </div>
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Contacts Fin -->
-              <!-- Offcanvas Edit -->
+              <!-- Offcanvas Agregar Contacto Fin -->
+
+              <!-- Offcanvas Editar Contacto -->
               <div
-                class="offcanvas offcanvas-end offcanvas-contacts"
+                class="offcanvas offcanvas-end offcanvas-data-form"
                 tabindex="-1"
                 id="offcanvasEditContact"
-                 aria-labelledby="offcanvasEditContactLabel"> <!--modificar los id con aria-label -->              
+                aria-labelledby="offcanvasEditContactLabel"
+              >
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
                     Editar contacto
                   </h5>
-                  <!-- <h5 class="offcanvas-title h5" id="offcanvasEditContactLabel">
-                    Editar grupo
-                  </h5> -->
                   <button
                     type="button"
                     class="btn-close"
@@ -586,9 +567,9 @@
                   </button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" class="contactForm" id="editContactForm">
+                  <form action="" class="dataForm" id="editContactForm">
                     <div>
-                      <div class="edit-contact-name">
+                      <div class="edit-form-name">
                         <p class="body-2 mb-1">Nombre del contacto *</p>
                         <p class="body-2 mb-0 fw-bold">Andrés Iniesta</p>
                       </div>
@@ -657,14 +638,82 @@
                   </form>
                 </div>
               </div>
-              <!-- Offcanvas Editar Fin -->
+              <!-- Offcanvas Editar Contacto Fin -->
+
+              <!-- Modal Eliminar Contacto -->
+              <div
+                class="modal fade"
+                id="deleteContactModal"
+                tabindex="-1"
+                aria-labelledby="deleteContactModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <p class="h5 mb-2">
+                        ¿Quieres eliminar la configuración de Andrés Iniesta?
+                      </p>
+                      <p class="mb-0">
+                        Estás a punto de eliminar la configuración de uno de tus
+                        contactos. Para personalizar la configuración de este
+                        contacto tendrás que volver a agregarlo al listado
+                      </p>
+                    </div>
+                    <div class="modal-footer border-none">
+                      <button
+                        type="button"
+                        class="btn btn-lg btn-outline-primary outline-none me-1"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-lg btn-danger"
+                        id="deleteContactBtn"
+                        data-bs-dismiss="modal"
+                      >
+                        Si, eliminar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal Eliminar Contacto Fin -->
             </div>
           </div>
         </div>
-        <!-- === Toast éxito editado === -->
+        <!-- === Toast  === -->
+
         <div
           class="toast-container custom-toast position-fixed pb-3 bottom-0 start-50 translate-middle-x"
         >
+          <!-- === Toast éxito Agregar Contacto === -->
+          <div
+            id="addContactSuccessToast"
+            class="toast toast-success"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text">Contacto agregado con éxito</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <!-- === Toast éxito Agregar Contacto Fin === -->
+          <!-- === Toast éxito Editar Contacto === -->
           <div
             id="editContactSuccessToast"
             class="toast toast-success"
@@ -687,8 +736,59 @@
               </span>
             </button>
           </div>
-          <!-- === Toast éxito editado Fin === -->
+          <!-- === Toast éxito Editar Contacto Fin === -->
+          <!-- === Toast error Editar Contacto === -->
+          <div
+            id="editContactErrorToast"
+            class="toast toast-danger"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text"
+              >Ha ocurrido un error, intenta nuevamente</span
+            >
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <!-- === Toast error Editar Contacto Fin === -->
+          <!-- === Toast éxito Contacto eliminado === -->
+          <div
+            id="deleteContactToast"
+            class="toast toast-success"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="toast-content__text">Contacto eliminado</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Cerrar"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                close
+              </span>
+            </button>
+          </div>
+          <!-- === Toast éxito Contacto eliminado Fin === -->
         </div>
+        <!-- === Toast Fin  === -->
       </section>
     </main>
 
@@ -702,13 +802,15 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-    <!-- Buscador -->
-    <script src="../../js/search-contact.js"></script>
-    <!-- Validación de formulario - Agregar -->
-    <script src="../../js/form-validation-contact.js"></script>
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
+    <!-- Validación de formulario Agregar contacto - Buscador - Toast de éxito -->
+    <script src="../../js/form-add-contact.js"></script>
     <!-- Validación de formulario - Editar -->
-    <script src="../../js/form-validation-contact-edit.js"></script>
+    <script src="../../js/form-edit-contact.js"></script>
     <!-- Tooltip -->
     <script src="../../js/tooltip.js"></script>
+    <!-- Toast -->
+    <script src="../../js/toast.js"></script>
   </body>
 </html>

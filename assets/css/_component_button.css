@@ -6,7 +6,7 @@
 /* Tamaño grande */
 .btn-lg {
   line-height: var(--line-height-body-1);
-  padding: 0.5rem 1rem;
+  padding: 14.4px 1rem;
   min-height: 48px;
 }
 /* Tamaño chico */
