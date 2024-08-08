@@ -111,12 +111,15 @@
 
       <section class="container">
         <div class="row install-section">
-          <div class="col-12 col-lg-6 install-section__item">
-            <div class="section-qr">
-              <!-- <img src="../../img/qr_code.svg" alt="Código QR" /> -->
+          <div class="col-12 nav-sections">
+             <div class="section-qr">            
               <div id="qrcode"></div>
+            </div> 
+            <div class="alternative-option">
+              <small>Opción alternativa</small>
+              <a href="">Usar código numérico</a>
             </div>
-            <div class="section-authcode">
+          <!--  <div class="section-authcode">
               <form action="">
                 <div>
                   <label class="mb-2 d-block" for="authcode"
@@ -127,13 +130,16 @@
                     id="authcode"
                     name="authcode"
                     placeholder="XXXX-XXXX"
+                    maxlength="8"
                   />
                 </div>
               </form>
-            </div>
+            </div>-->
           </div>
-          <div class="col-12 col-lg-6 install-section__item">
-            <div class="nav-sections mb-3">
+        </div>
+        <div class="row">
+          <div class="col-lg-6 install-section__item">
+            <div class="nav-sections mb-4">
               <img src="../../img/android-51.svg" alt="Android" />
               <p class="h6 my-2">Instrucciones para teléfonos Android</p>
               <ol>
@@ -148,6 +154,8 @@
                 <li class="item-mobile">Apuntar la cámara al código QR</li>
               </ol>
             </div>
+          </div>
+          <div class="col-lg-6 install-section__item">
             <div class="nav-sections">
               <img src="../../img/iOS.svg" alt="iOS" />
               <p class="h6 my-2">Instrucciones para teléfonos Android</p>
@@ -184,8 +192,8 @@
     <script>
       const qrcode = new QRCode(document.getElementById('qrcode'), {
         text: 'http://jindo.dev.naver.com/collie',
-        width: 150,
-        height: 150,
+        width: 180,
+        height: 180,
         colorDark : '#000',
         colorLight : '#fff',
         correctLevel : QRCode.CorrectLevel.H

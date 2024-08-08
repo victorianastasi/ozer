@@ -1,11 +1,8 @@
-@media screen and (max-width: 992px) {
-  .install-section {
-    margin: 0;
-  }
-  .install-section__item {
-    padding-left: 0;
-    padding-right: 0;
-  }
+/* @media screen and (max-width: 992px) {
+} */
+.install-section {
+  margin: 0;
+  margin-bottom: 1.5rem;
 }
 .nav-sections {
   padding: 1.5rem;
@@ -18,13 +15,13 @@
 .nav-sections ol .item-mobile {
   display: none;
 }
+.alternative-option{
+  color: var(--text-main-color);
+}
 @media screen and (min-width: 992px) {
   .nav-sections ol .item-mobile {
     display: list-item;
   }
-}
-.section-qr {
-  display: none;
 }
 @media screen and (min-width: 992px) {
   .section-qr {
@@ -34,16 +31,16 @@
     background-color: var(--white);
     border-radius: 1rem;
     height: 100%;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 .section-authcode {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 992px) {
-  .section-authcode {
-    display: none;
-  }
-}
+/* @media screen and (min-width: 992px) {
+} */
 .section-authcode input {
   border: none;
   font-weight: 200;
@@ -55,7 +52,6 @@
   text-align: center;
   min-height: 74px;
 }
-
 .custom-loading-spacer {
   margin-top: 120px;
 }
