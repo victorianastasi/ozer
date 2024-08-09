@@ -90,7 +90,7 @@
   line-height: var(--line-height-body-1);
   padding: 1rem;
   max-height: 328px;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 0.5rem;
 }
 
@@ -105,8 +105,6 @@
     z-index: 99;
     width: 140px;
     max-height: 300px;
-    overflow-y: auto;
-    scrollbar-width: none;
   }
   .select-items div {
     padding: 0.75rem;
