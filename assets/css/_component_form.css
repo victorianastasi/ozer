@@ -154,6 +154,9 @@
   font-weight: 400;
   font-size: var(--font-size-body-3);
   line-height: 14px;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 .suggestions .no-results {
   padding: 1rem 0.75rem;
