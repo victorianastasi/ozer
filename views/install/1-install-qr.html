@@ -129,7 +129,7 @@
       </section>
 
       <section class="container">
-        <div class="row install-section">
+        <div class="row install-section mb-5 mb-lg-0">
           <div class="col-12 col-lg-6 install-section__item">
             <div class="section-qr nav-sections mb-3">
               <div id="qrcode"></div>
@@ -139,7 +139,7 @@
             <div class="nav-sections mb-3">
               <img src="../../img/android-51.svg" alt="Android" />
               <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
+              <ol class="body-2 mb-0">
                 <li>Abrir WhatsApp</li>
                 <li>Pulsar en : (3 puntitos)</li>
                 <li>Dispositivos vinculados</li>
@@ -150,7 +150,7 @@
             <div class="nav-sections">
               <img src="../../img/iOS.svg" alt="iOS" />
               <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
+              <ol class="body-2 mb-0">
                 <li>Abrir WhatsApp</li>
                 <li>Pulsar en Configuración</li>
                 <li>Dispositivos vinculados</li>
@@ -179,8 +179,6 @@
     <script>
       const qrcode = new QRCode(document.getElementById("qrcode"), {
         text: "http://jindo.dev.naver.com/collie",
-        width: 180,
-        height: 180,
         colorDark: "#000",
         colorLight: "#fff",
         correctLevel: QRCode.CorrectLevel.H,

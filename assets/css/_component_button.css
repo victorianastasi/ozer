@@ -85,12 +85,18 @@
 }
 .btn.btn-outline-danger:hover {
   color: var(--white);
+  background-color: var(--danger-bg-color);
+}
+.btn.btn-outline-danger:active {
+  color: var(--white);
+  background-color: #942E33;
 }
 .btn.btn-outline-danger:focus-visible,
 .btn.btn-outline-danger:focus {
   outline: 1px solid var(--danger-bg-color);
   color: var(--white);
   background-color: var(--danger-bg-color);
+  box-shadow: 0 0 0 .25rem var(--btn-primary-border-focus);
 }
 .btn.btn-danger {
   outline-color: var(--danger-bg-color);
@@ -98,4 +104,14 @@
 }
 .btn.btn-danger:hover {
   color: var(--white);
+  background-color: #B2393F;
+}
+.btn.btn-danger:active {
+  color: var(--white);
+  background-color: #942E33;
+}
+.btn.btn-danger:focus {
+  color: var(--white);
+  background-color: var(--danger-bg-color);
+  box-shadow: 0 0 0 .25rem var(--btn-primary-border-focus);
 }

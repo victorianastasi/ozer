@@ -129,11 +129,11 @@
       </section>
 
       <section class="container">
-        <div class="row install-section">
+        <div class="row install-section mb-5 mb-lg-0">
           <div class="col-12 col-lg-6 install-section__item">
             <div class="section-authcode">
               <form action="">
-                <div class="px-2">
+                <div class="px-lg-2">
                   <label class="mb-2 d-block text-center" for="authcode"
                     >Código de autenticación</label
                   >
@@ -151,7 +151,7 @@
             <div class="nav-sections mb-3">
               <img src="../../img/android-51.svg" alt="Android" />
               <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
+              <ol class="body-2 mb-0">
                 <li>Abrir WhatsApp</li>
                 <li>Pulsar en : (3 puntitos)</li>
                 <li>Dispositivos vinculados</li>
@@ -165,7 +165,7 @@
             <div class="nav-sections">
               <img src="../../img/iOS.svg" alt="iOS" />
               <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
+              <ol class="body-2 mb-0">
                 <li>Abrir WhatsApp</li>
                 <li>Pulsar en : (3 puntitos)</li>
                 <li>Dispositivos vinculados</li>
@@ -191,88 +191,7 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-
-    <script>
-      const qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: "http://jindo.dev.naver.com/collie",
-        width: 150,
-        height: 150,
-        colorDark: "#000",
-        colorLight: "#fff",
-        correctLevel: QRCode.CorrectLevel.H,
-      });
-    </script>
     <!-- Desplegable de Idioma -->
     <script src="../../js/language.js"></script>
   </body>
 </html>
-
-<!-- 
-    <main>
-      <section class="container">
-        <h1 class="main-title">Instalación de Ozer en WhatsApp</h1>
-      </section>
-
-      <section class="container">
-        <div class="row install-section">
-          <div class="col-12 nav-sections">
-            <div class="section-authcode">
-              <form action="">
-                <div>
-                  <label class="mb-2 d-block text-center" for="authcode"
-                    >Código de autenticación</label
-                  >
-                  <input
-                    type="text"
-                    id="authcode"
-                    name="authcode"
-                    placeholder="XXXX-XXXX"
-                    maxlength="8"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="text-center">
-              <small>Opción alternativa</small><br>
-              <a href="#">Usar código numérico</a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 install-section__item">
-            <div class="nav-sections mb-4">
-              <img src="../../img/android-51.svg" alt="Android" />
-              <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
-                <li>Abrir WhatsApp</li>
-                <li>Pulsar en : (3 puntitos)</li>
-                <li>Dispositivos vinculados</li>
-                <li>Vincular dispositivo</li>
-                <li>Vincular con el número de teléfono</li>
-                <li>Insertar el código que aparece al inicio de esta pantalla</li>
-              </ol>
-            </div>
-          </div>
-          <div class="col-lg-6 install-section__item">
-            <div class="nav-sections">
-              <img src="../../img/iOS.svg" alt="iOS" />
-              <p class="h6 my-2">Instrucciones para teléfonos Android</p>
-              <ol>
-                <li>Abrir WhatsApp</li>
-                <li>Pulsar en : (3 puntitos)</li>
-                <li>Dispositivos vinculados</li>
-                <li>Vincular dispositivo</li>
-                <li>Vincular con el número de teléfono</li>
-                <li>
-                  Insertar el código que aparece al inicio de esta pantalla
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
- -->
