@@ -130,6 +130,93 @@
 
       <section class="container">
         <div class="row install-section">
+          <div class="col-12 col-lg-6 install-section__item">
+            <div class="section-authcode">
+              <form action="">
+                <div class="px-2">
+                  <label class="mb-2 d-block text-center" for="authcode"
+                    >Código de autenticación</label
+                  >
+                  <input
+                    type="text"
+                    id="authcode"
+                    name="authcode"
+                    placeholder="XXXX-XXXX"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 install-section__item">
+            <div class="nav-sections mb-3">
+              <img src="../../img/android-51.svg" alt="Android" />
+              <p class="h6 my-2">Instrucciones para teléfonos Android</p>
+              <ol>
+                <li>Abrir WhatsApp</li>
+                <li>Pulsar en : (3 puntitos)</li>
+                <li>Dispositivos vinculados</li>
+                <li>Vincular dispositivo</li>
+                <li>Vincular con el número de teléfono</li>
+                <li>
+                  Insertar el código que aparece al inicio de esta pantalla
+                </li>
+              </ol>
+            </div>
+            <div class="nav-sections">
+              <img src="../../img/iOS.svg" alt="iOS" />
+              <p class="h6 my-2">Instrucciones para teléfonos Android</p>
+              <ol>
+                <li>Abrir WhatsApp</li>
+                <li>Pulsar en : (3 puntitos)</li>
+                <li>Dispositivos vinculados</li>
+                <li>Vincular dispositivo</li>
+                <li>Vincular con el número de teléfono</li>
+                <li>
+                  Insertar el código que aparece al inicio de esta pantalla
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+
+    <script>
+      const qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 150,
+        height: 150,
+        colorDark: "#000",
+        colorLight: "#fff",
+        correctLevel: QRCode.CorrectLevel.H,
+      });
+    </script>
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
+  </body>
+</html>
+
+<!-- 
+    <main>
+      <section class="container">
+        <h1 class="main-title">Instalación de Ozer en WhatsApp</h1>
+      </section>
+
+      <section class="container">
+        <div class="row install-section">
           <div class="col-12 nav-sections">
             <div class="section-authcode">
               <form action="">
@@ -188,19 +275,4 @@
       </section>
     </main>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-    <!-- Desplegable de Idioma -->
-    <script src="../../js/language.js"></script>
-  </body>
-</html>
+ -->
