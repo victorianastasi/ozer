@@ -1,0 +1,119 @@
+/* HEADER Y SCROLLSPY */
+.header-landing {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.header-landing .navbar {
+  padding: 1rem 0;
+  background-color: white;
+}
+@media screen and (max-width: 992px) {
+  .navbar .offcanvas-container-top.bg-offcanvas {
+    background-color: var(--bs-body-bg);
+  }
+}
+.navbar .offcanvas-container-top.bg-offcanvas .dropdown-menu {
+  background-color: var(--bs-body-bg);
+}
+.navbar .header-login {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 1.5rem;
+  margin: 28px 0;
+}
+.navbar .header-login .btn {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .navbar .header-login {
+    margin: 0;
+  }
+  .navbar .header-login .btn {
+    width: fit-content;
+  }
+
+  .navbar
+    .offcanvas-body
+    .offcanvas-container-top.bg-offcanvas
+    .offcanvas-link__text {
+    flex-direction: row;
+  }
+}
+.navbar .offcanvas-body .offcanvas-container-top hr.landing-divisor {
+  margin: 28px 0;
+  background-color: var(--border-primary-color);
+}
+@media screen and (max-width: 992px) {
+  .navbar .nav-scrollspy .nav-pills {
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 0.25rem;
+  }
+  .navbar .nav-scrollspy .nav-pills .nav-link {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+}
+.navbar .nav-scrollspy .nav-pills .nav-link {
+  padding: 0;
+  color: var(--text-main-color);
+}
+.navbar .nav-scrollspy .nav-pills .nav-link.active {
+  font-weight: 700;
+  background-color: transparent;
+}
+@media screen and (min-width: 992px) {
+  .navbar .nav-scrollspy .nav-pills {
+    gap: 24px;
+  }
+}
+/* SECCION HOME */
+.section-home {
+  background-color: var(--bs-body-bg);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-home .home {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 328px;
+}
+.section-home .home .home-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.section-home .home .home-text .home-text_title {
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: 400;
+}
+.section-home .home .home-img img {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .section-home .home {
+    flex-direction: row;
+    max-width: unset;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .section-home .home .home-text {
+    max-width: 447px;
+  }
+  .section-home .home .home-text .home-text_title {
+    font-size: 44px;
+  }
+  .section-home .home .home-text .btn {
+    width: fit-content;
+  }
+  .section-home .home .home-img img {
+    width: 447px;
+  }
+}
