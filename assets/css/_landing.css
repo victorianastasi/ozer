@@ -341,7 +341,8 @@
 
 /* SECCION CONTACTO */
 .section-landing-contact {
-  margin: 3rem 0;
+  margin: 3rem 0 0;
+  padding-bottom: 3rem;
 }
 .section-landing-contact-title {
   font-weight: 300;
@@ -415,7 +416,8 @@
 }
 @media screen and (min-width: 992px) {
   .section-landing-contact {
-    margin: 100px 0;
+    margin: 100px 0 0;
+    padding-bottom: 100px;
   }
   .section-landing-contact-title {
     font-size: 40px;
