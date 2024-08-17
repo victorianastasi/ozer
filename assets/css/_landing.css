@@ -338,3 +338,103 @@
     margin-top: 48px;
   }
 }
+
+/* SECCION CONTACTO */
+.section-landing-contact {
+  margin: 3rem 0;
+}
+.section-landing-contact-title {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38.4px;
+  margin-bottom: 1.25rem;
+}
+.section-landing-contact-container {
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 328px;
+  margin: 0 auto;
+}
+.section-landing-contact-container .landing-contact-text {
+  width: 100%;
+}
+/* FORM */
+.landing-contact-form__label {
+  font-weight: 400;
+  font-size: var(--font-size-body-2);
+  line-height: var(--line-height-body-2);
+  margin-bottom: 0.5rem;
+}
+.landing-contact-form__label.message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing-contact-form__input {
+  display: block;
+  height: 48px;
+  width: 100%;
+  appearance: none;
+  background-color: var(--white);
+  font-weight: 400;
+  font-size: var(--font-size-body-2);
+  line-height: var(--line-height-body-2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--border-primary-color);
+}
+.landing-contact-form__input:focus {
+  background-color: var(--white);
+  border: none;
+  outline: 0;
+  box-shadow: inset 0 0 0 0.125rem var(--btn-primary-color);
+}
+.landing-contact-form__input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+.landing-contact-form__input.is-invalid {
+  background-image: none;
+  box-shadow: inset 0 0 0 1px var(--danger-bg-color);
+}
+.landing-contact-form__input.is-invalid:focus {
+  box-shadow: inset 0 0 0 0.125rem var(--danger-border-color);
+}
+.landing-contact-form__input.message {
+  height: unset;
+  min-height: 161px;
+}
+
+.landing-contact-form-success p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+@media screen and (min-width: 992px) {
+  .section-landing-contact {
+    margin: 100px 0;
+  }
+  .section-landing-contact-title {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 2.75rem;
+  }
+  .section-landing-contact-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: unset;
+  }
+  .section-landing-contact-container .landing-contact-img,
+  .section-landing-contact-container .landing-contact-text {
+    width: 447px;
+  }
+
+  .landing-contact-form-success {
+    margin-top: -24px;
+  }
+}
