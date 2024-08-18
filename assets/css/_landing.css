@@ -15,9 +15,9 @@
   .navbar .offcanvas-container-top.bg-offcanvas {
     background-color: var(--bs-body-bg);
   }
-}
-.navbar .offcanvas-container-top.bg-offcanvas .dropdown-menu {
-  background-color: var(--bs-body-bg);
+  .navbar .offcanvas-container-top.bg-offcanvas .dropdown-menu {
+    background-color: var(--bs-body-bg);
+  }
 }
 .navbar .header-login {
   display: flex;
