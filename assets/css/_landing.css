@@ -440,3 +440,203 @@
     margin-top: -24px;
   }
 }
+
+/* FOOTER */
+.footer-landing {
+  position: relative;
+  margin-top: 12px;
+}
+.footer-landing .footer-bg-1,
+.footer-landing .footer-bg-2,
+.footer-landing .footer-bg-3 {
+  position: absolute;
+  background-color: rgba(8, 25, 87, 0.5);
+  width: 68%;
+  max-width: 926px;
+  height: 344px;
+  border-radius: 3rem;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer-landing .footer-bg-2 {
+  background-color: rgba(8, 25, 87, 0.75);
+  max-width: 1144px;
+  width: 84%;
+  top: -24px;
+}
+.footer-landing .footer-bg-3 {
+  background-color: rgb(8, 25, 87);
+  border-radius: 1.5rem 1.5rem 0 0;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  padding: 3rem 0;
+  color: white;
+  height: unset;
+}
+.footer-landing .footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer-landing .footer-brand .footer-brand-logo {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer-landing .footer-brand .footer-brand-logo span {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+.footer-landing .footer-brand .btn {
+  width: 100%;
+}
+
+.footer-landing .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0 48px;
+}
+.footer-landing .footer-links .footer-links-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer-landing .footer-links-sections-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+.footer-landing .footer-links-sections-title {
+  font-size: var(--font-size-body-2);
+  line-height: var(--line-height-body-2);
+}
+.footer-landing a {
+  color: white;
+  display: block;
+}
+.footer-landing a:hover {
+  color: #f0f0f0;
+}
+.footer-landing a:focus,
+.footer-landing a:focus-visible {
+  color: white;
+  box-shadow: 0 0 0 0.25rem #081957;
+  outline: none;
+}
+.footer-landing a:active {
+  color: #dddddd;
+}
+
+.footer-landing .footer-end {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+.footer-landing hr {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.btn-primary.dark-mode {
+  background-color: white;
+  outline: 1px solid white;
+  color: #2e49a5;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 13px 16px;
+}
+.btn-primary.dark-mode:active,
+.btn-primary.dark-mode:hover {
+  background-color: #f0f0f0;
+  outline-color: #f0f0f0;
+  color: #2e49a5;
+  font-weight: 500;
+}
+.btn-primary.dark-mode:focus {
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 0 0 0.25rem #081957;
+  font-weight: 500;
+}
+@media screen and (min-width: 992px) {
+  .footer-landing {
+    margin-top: 5rem;
+  }
+  .footer-landing .footer-bg-3 {
+    border-radius: 3rem 3rem 0 0;
+  }
+  .footer-landing .footer-brand .btn {
+    width: fit-content;
+  }
+  .footer-landing .footer-brand .footer-brand-logo {
+    margin-bottom: 44px;
+  }
+  .footer-landing .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+  }
+  .footer-landing .footer-links {
+    flex-direction: row;
+    gap: 96px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 32px 0;
+  }
+  .footer-landing .footer-links-sections-link {
+    font-size: var(--font-size-body-1);
+    line-height: var(--line-height-body-1);
+  }
+  .footer-landing .footer-links-sections-title {
+    font-size: var(--font-size-body-3);
+    line-height: var(--line-height-body-3);
+  }
+  .footer-landing .x-img-media {
+    width: 24px;
+    height: 24px;
+  }
+  .footer-landing .footer-end {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .footer-landing .footer-end a {
+    display: inline-block;
+  }
+  .btn-primary.dark-mode {
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+  }
+  .btn-primary.dark-mode:hover {
+    background-color: white;
+    color: #2e49a5;
+    font-weight: 500;
+  }
+  .btn-primary.dark-mode:active {
+    background-color: #f0f0f0;
+    color: #2e49a5;
+    font-weight: 500;
+    outline-color: #f0f0f0;
+  }
+  .btn-primary.dark-mode:focus {
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 0 0 0.25rem #081957;
+    font-weight: 500;
+  }
+}
