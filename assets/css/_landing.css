@@ -346,15 +346,18 @@
   border: 1px solid #233D9B;
 }
 .card.card-pro {
-  background: linear-gradient(155deg, rgba(2, 0, 36, 1) 0%, rgba(17, 17, 235, 1) 66%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(155deg, rgba(20,42,121,1) 16%, rgba(55,84,189,1) 72%, rgba(213,219,243,1) 100%);
   color: #fff;
   border-radius: 16px;
   border: none;
 }
 .badge.badge-ozer {
-  background-color: #848fb1;
+  background-color: rgba(35,61,155, 0.5);
   text-transform: uppercase;
   border-radius: 8px;
+}
+.badge.badge-ozer.badge-pro {
+  background-color: rgba(255,255,255, 0.5);
 }
 .list-card-ozer {
   margin-bottom: 24px;
