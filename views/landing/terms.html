@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header-landing">
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="../../img/logo.svg" alt="Ozer.bot" />
+          </a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasHeader"
+            aria-controls="offcanvasHeader"
+            aria-label="Menú"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true">
+              menu
+            </span>
+          </button>
+          <div
+            class="offcanvas-lg offcanvas-end"
+            tabindex="-1"
+            id="offcanvasHeader"
+            aria-labelledby="offcanvasHeaderLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#offcanvasHeader"
+                aria-label="Cerrar"
+              >
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  close
+                </span>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <div class="offcanvas-container-top bg-offcanvas">
+                  <div class="nav-scrollspy" id="navbar-scrollspy">
+                    <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="#scrollspyHeading1"
+                          data-bs-dismiss="offcanvas"
+                          data-bs-target="#offcanvasHeader"
+                          >Home</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="#scrollspyHeading2"
+                          data-bs-dismiss="offcanvas"
+                          data-bs-target="#offcanvasHeader"
+                          >Benefits</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="#scrollspyHeading3"
+                          data-bs-dismiss="offcanvas"
+                          data-bs-target="#offcanvasHeader"
+                          >Privacy</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="#scrollspyHeading4"
+                          data-bs-dismiss="offcanvas"
+                          data-bs-target="#offcanvasHeader"
+                          >Pricing</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="#scrollspyHeading5"
+                          data-bs-dismiss="offcanvas"
+                          data-bs-target="#offcanvasHeader"
+                          >FAQs</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="#scrollspyHeading6"
+                          data-bs-dismiss="offcanvas"
+                          data-bs-target="#offcanvasHeader"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!--  SCROLLSPY FIN -->
+                  <!--  LOGIN INICIO -->
+                  <div class="header-login">
+                    <a href="#" class="btn btn-lg btn-primary">Sign up</a>
+                    <a href="#" class="btn btn-lg btn-outline-primary">Login</a>
+                  </div>
+                  <!--  LOGIN FIN -->
+                  <hr class="landing-divisor" />
+                  <!--  Desplegable de Idioma INICIO -->
+                  <div class="dropdown">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      id="dropdownLanguageButton"
+                    >
+                      <div class="offcanvas-link__text landing-language">
+                        <span
+                          class="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
+                          language
+                        </span>
+                        <span id="dropdownLanguageButtonText">Español</span>
+                      </div>
+                      <span
+                        class="material-symbols-outlined btn-dropdown-icon"
+                        aria-hidden="true"
+                      >
+                        expand_more
+                      </span>
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownLanguageButton"
+                    >
+                      <li>
+                        <button class="dropdown-item d-none" data-lang="es">
+                          Español
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="en">
+                          English
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" data-lang="de">
+                          Deutsch
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--  Desplegable de Idioma FIN -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article
+        data-bs-spy="scroll"
+        data-bs-target="#navbar-scrollspy"
+        data-bs-threshold="0,1"
+        data-bs-root-margin="-30% 0% -70%"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+      >
+        <section>
+          <div class="container">
+            <div class="terms-container">
+              <a href="#" class="terms-link">
+                <span class="material-symbols-outlined"> arrow_back </span>
+                <span class="terms-link_text">Volver al inicio</span>
+              </a>
+              <h1 class="terms-title">Terms and conditions</h1>
+              <div class="terms-condition">
+                <p class="terms-condition_title">1. Partes</p>
+                <p>
+                  <strong>1.1.</strong> La parte en el Acuerdo es Rather Labs
+                  Inc. con domicilio en 2810 N Church St, Wilmington, Delaware,
+                  US, en adelante como “TranscribeMe” o “RL” indistintamente.
+                  Usuario se entenderá lo previsto en la definición obrante en
+                  el punto 2.
+                </p>
+                <p>
+                  <strong>1.2.</strong> TranscribeMe y el Usuario se denominan
+                  "Partes" colectivamente y como "Parte" individualmente.
+                </p>
+              </div>
+              <div class="terms-condition">
+                <p class="terms-condition_title">2. Definiciones</p>
+                <p>
+                  Para estos Términos y Condiciones, se entenderá como:
+                  <br />
+                  “Bot” es un programa informático que simula la interacción con
+                  una persona humana, cuya finalidad, para estos términos y
+                  condiciones, resulta ser la recepción de un archivo de audio y
+                  la devolución al Usuario de una transcripción de dicho archivo
+                  junto con un resumen, dependiendo esto último de la longitud
+                  del audio. Así también el Usuario podrá interactuar con el
+                  Bot, el cual, utilizando inteligencia artificial, podrá
+                  responder preguntas, resolver problemas, y mantener cualquier
+                  tipo de conversación, simulando una interacción con una
+                  persona humana;
+                </p>
+              </div>
+              <div class="terms-condition">
+                <p class="terms-condition_title">
+                  3. Enmiendas / Actualizaciones en los Términos y Condiciones
+                </p>
+                <p>
+                  TranscribeMe tendrá el derecho y la autorización para cambiar
+                  o actualizar los términos y condiciones contenidos en este
+                  documento y en la Política de Privacidad, los cuales resultan
+                  ser aceptados en el momento de la utilización del Servicio, en
+                  cualquier momento, ya sea parcial o completamente. El Usuario
+                  no podrá alegar, exigir o declarar que TranscribeMe no le ha
+                  notificado sobre los cambios y actualizaciones referidos, o
+                  los cambios y actualizaciones referidos no puedan ser
+                  aplicables para el Usuario, si el Usuario ha sido notificado
+                  directamente por TranscribeMe o si ha accedido al Sitio de
+                  cualquier manera directa / indirectamente después de cambios y
+                  actualizaciones.
+                </p>
+              </div>
+              <div class="terms-condition">
+                <p class="terms-condition_title">
+                  4. Perfeccionamiento de los Términos y Condiciones. Vigencia.
+                </p>
+                <p>
+                  <strong>4.1.</strong> Al utilizar los Servicios de
+                  TranscribeMe, y/o acceder al Sitio, registrarse y contratar la
+                  Membresía escogida; el Usuario manifiesta que ha leído,
+                  entendido y aceptado estos términos y condiciones en todas sus
+                  partes y entrará en vigor y se considerará que ambas Partes
+                  han aceptado estar jurídicamente obligadas.
+                </p>
+                <p>
+                  <strong>4.2.</strong> Estos Términos y Condiciones mantendrán
+                  su vigencia y obligará a las Partes mientras el Usuario cumpla
+                  con todas las obligaciones a su cargo, mientras el Usuario
+                  siga utilizando los Servicios y, para el caso, manteniendo
+                  vigente su cuenta con el pago de la Membresía elegida.
+                </p>
+                <p>
+                  <strong>4.3.</strong> El Usuario podrá cancelar su Membresía
+                  ingresando a https://www.mercadopago.com.ar/subscriptions,
+                  para el caso de haber optado con el pago mediante Mercado
+                  Pago, o bien a
+                  https://billing.stripe.com/p/login/9AQeVsexYcr16OceUU, para el
+                  caso de utilizar Stripe en el pago de su Membresia. Si
+                  TranscribeMe determine que el Usuario viole parcial o
+                  completamente cualquier disposición de estos términos y
+                  Condiciones y/o Política de Privacidad, TranscribeMe podrá
+                  suspender la cuenta de Usuario de forma permanente / temporal
+                  y/o rescindirá estos Términos y Condiciones inmediatamente sin
+                  previo aviso y sin incurrir ninguna responsabilidad por daños
+                  de cualquier índole.
+                </p>
+              </div>
+              <div class="terms-condition">
+                <p class="terms-condition_title">
+                  5. Uso de Contenidos / Servicios y Obligaciones de
+                  TranscribeMe Relacionadas con la Cuenta de Usuario
+                </p>
+                <p>
+                  Restricción por Edad. Se encuentra prohibido la utilización
+                  del Servicio por menores de edad de 16 años, que no se
+                  encuentren debidamente supervisados por sus padres, tutores
+                  y/o personas mayores de edad que tengan su cuidado. La
+                  utilización del Servicio quedará bajo exclusiva
+                  responsabilidad de las personas a cargo de dichos menores,
+                  eximiendo de responsabilidad a TranscribeMe por todo uso
+                  contrario a estos Términos y Condiciones, a la Política de
+                  Privacidad, y a la legislación de cada país donde se utiliza
+                  el Servicio.
+                </p>
+              </div>
+              <div class="terms-condition">
+                <p class="terms-condition_title">6. Descripción del Servicio</p>
+                <p>
+                  <strong>6.1.</strong>
+                  TranscribeMe es un Bot que utilizando IA recibe mensajes y/o
+                  archivos de audio enviados por los Usuarios, con hasta un
+                  límite de 20 minutos de extensión de audio totales por mes en
+                  el modelo gratuito. Actualmente únicamente se encuentra
+                  disponible el servicio en las plataformas WhatsApp y Telegram,
+                  pudiendo agregarse nuevas plataformas en el futuro, por lo que
+                  recomendamos chequear el Sitio por actualizaciones de estos
+                  Términos y Condiciones. El Usuario también podrá interactuar
+                  con el Bot, el cual podrá simular la interacción con una
+                  persona humana, pudiendo consultarle a éste cualquier clase de
+                  información, la cual el Bot podrá devolver una respuesta.Para
+                  consultar más detalles del servicio gratuito (denominado “Plan
+                  Free”), podes acceder a https://www.transcribeme.app/Para el
+                  caso en que el Usuario desee, podrá acceder a un Servicio de
+                  Membresía (denominado “Plan Plus”), donde podrá utilizar los
+                  Servicios de TranscribeMe sin las restricciones descritas en
+                  la presente cláusula. Los detalles de los Servicios incluidos
+                  en el Plan Plus podrán consultarse en la siguiente dirección
+                  https://www.transcribeme.app/ y en estos términos y
+                  condiciones.
+                </p>
+                <p>
+                  <strong>6.2.</strong> Queda bajo exclusiva responsabilidad del
+                  Usuario la utilización para cualquier fin del Servicio, del
+                  resumen de la transcripción del audio, aceptando el Usuario
+                  que la transcripción enviada al Usuario por el Bot, como así
+                  también su resumen,mismo podrá omitir alguna parte del audio
+                  enviado, detalle y/o transcripción del audio original. También
+                  el Usuario acepta que toda información que sea suministrada
+                  por el Bot podrá no ser correcta, actualizada, fidedigna, etc,
+                  quedando bajo su exclusiva responsabilidad la utilización de
+                  la misma.
+                </p>
+              </div>
+              <div class="terms-condition">
+                <p class="terms-condition_title">
+                  7. Ley Aplicable y Jurisdicción
+                </p>
+                <p>
+                  Este Acuerdo será regido por y se interpretará de conformidad
+                  con las Leyes de Delaware, Estados Unidos. Las Partes dan su
+                  consentimiento a la jurisdicción exclusiva de los Juzgados de
+                  dicha jurisdicción, renunciando a otra clase fuero o
+                  jurisdicción.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer-landing">
+      <div class="footer-bg-1 d-none d-lg-block"></div>
+      <div class="footer-bg-2 d-none d-lg-block"></div>
+      <div class="footer-bg-3">
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-brand">
+              <div class="footer-brand-logo">
+                <img
+                  src="../../img/landing/Logo-Ozer.svg"
+                  alt="Logotipo Ozer"
+                />
+                <span>Ozer.bot</span>
+              </div>
+
+              <button type="button" class="btn btn-lg btn-primary dark-mode">
+                Try for free
+              </button>
+            </div>
+            <div class="footer-links">
+              <div class="footer-links-sections">
+                <p class="footer-links-sections-title mb-3 fw-bold">
+                  Ozer Website
+                </p>
+                <a href="#scrollspyHeading1" class="footer-links-sections-link"
+                  >Home</a
+                >
+                <a href="#scrollspyHeading2" class="footer-links-sections-link"
+                  >Benefits</a
+                >
+                <a href="#scrollspyHeading3" class="footer-links-sections-link"
+                  >Privacy</a
+                >
+                <a href="#scrollspyHeading4" class="footer-links-sections-link"
+                  >Pricing</a
+                >
+                <a href="#scrollspyHeading5" class="footer-links-sections-link"
+                  >FAQs</a
+                >
+                <a href="#scrollspyHeading6" class="footer-links-sections-link"
+                  >Contact</a
+                >
+              </div>
+              <div class="footer-links-sections">
+                <p class="footer-links-sections-title mb-3 fw-bold">
+                  Ozer Settings
+                </p>
+                <a href="#" class="footer-links-sections-link">General</a>
+                <a href="#" class="footer-links-sections-link">Contacts</a>
+                <a href="#" class="footer-links-sections-link">Groups</a>
+              </div>
+              <div class="footer-links-sections">
+                <p class="footer-links-sections-title mb-3 fw-bold">
+                  Social Media
+                </p>
+                <img
+                  src="../../img/landing/x-social-media.svg"
+                  alt="x social media"
+                  class="x-img-media"
+                />
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="footer-end body-2">
+            <div>
+              <span>© 2024 Ozer</span>
+            </div>
+            <div>
+              <a href="#" class="mb-3 mb-lg-0 me-lg-3">Terms and conditions</a>
+              <a href="#">Privacy policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Desplegable de Idioma -->
+    <script src="../../js/language.js"></script>
+  </body>
+</html>

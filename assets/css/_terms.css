@@ -1,0 +1,35 @@
+.terms-container {
+  padding: 40px 0;
+  max-width: 605px;
+  margin: 0 auto;
+}
+.terms-container .terms-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.terms-container .terms-link .terms-link_text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.terms-container .terms-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 2rem;
+}
+
+.terms-condition {
+  margin-bottom: 1.5rem;
+}
+.terms-condition p {
+  margin-bottom: 0;
+  word-wrap: break-word;
+}
+.terms-condition .terms-condition_title {
+  font-weight: 700;
+}
