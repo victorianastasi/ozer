@@ -19,6 +19,27 @@
     background-color: var(--bs-body-bg);
   }
 }
+.navbar .offcanvas-container-top.bg-offcanvas .btn.dropdown-toggle:focus {
+  box-shadow: none;
+}
+.navbar
+  .offcanvas-container-top.bg-offcanvas
+  .btn.dropdown-toggle:focus-visible {
+  box-shadow: 0 0 0 0.25rem var(--btn-primary-border-focus);
+}
+@media screen and (min-width: 992px) {
+  .navbar .offcanvas-container-top.bg-offcanvas .dropdown-menu {
+    min-width: 110px;
+    max-width: 110px;
+  }
+  .navbar .offcanvas-container-top.bg-offcanvas .dropdown-menu .dropdown-item {
+    padding: 0.25rem 1rem;
+  }
+  .navbar .offcanvas-container-top.bg-offcanvas #dropdownLanguageButtonText {
+    letter-spacing: -0.75px;
+    min-width: 55px;
+  }
+}
 .navbar .header-login {
   display: flex;
   align-items: center;
@@ -28,6 +49,10 @@
 }
 .navbar .header-login .btn {
   width: 100%;
+}
+.navbar .header-login .btn.btn-outline-primary:focus-visible {
+  background-color: transparent;
+  color: var(--btn-primary-color-hover);
 }
 @media screen and (min-width: 992px) {
   .navbar .header-login {
@@ -64,6 +89,9 @@
   padding: 0;
   color: var(--text-main-color);
 }
+.navbar .nav-scrollspy .nav-pills .nav-link:focus-visible {
+  box-shadow: 0 0 0 0.25rem var(--btn-primary-border-focus);
+}
 .navbar .nav-scrollspy .nav-pills .nav-link.active {
   font-weight: 700;
   background-color: transparent;
@@ -97,6 +125,12 @@
   font-size: 32px;
   line-height: 38.4px;
   font-weight: 400;
+}
+.section-home .home .home-text .btn {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 8px 16px;
 }
 .section-home .home .home-img img {
   width: 100%;
@@ -409,6 +443,12 @@
   min-height: 161px;
 }
 
+.landing-contact-form .btn-primary {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 8px 16px;
+}
 .landing-contact-form-success p {
   font-weight: 400;
   font-size: 18px;
@@ -555,8 +595,8 @@
   color: #2e49a5;
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
-  padding: 13px 16px;
+  line-height: 32px;
+  padding: 8px 16px;
 }
 .btn-primary.dark-mode:active,
 .btn-primary.dark-mode:hover {
