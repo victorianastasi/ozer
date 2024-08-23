@@ -1,3 +1,6 @@
+html {
+  scroll-padding-top: 80px;
+}
 /* HEADER Y SCROLLSPY */
 .header-landing {
   position: sticky;
