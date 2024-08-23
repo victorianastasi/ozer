@@ -146,6 +146,7 @@
   }
   .section-home .home .home-text {
     max-width: 447px;
+    margin-top: 1.5rem;
   }
   .section-home .home .home-text .home-text_title {
     font-size: 44px;
@@ -236,16 +237,18 @@
   font-size: 32px;
   line-height: 38.4px;
   max-width: 607px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .section-listen-container {
   display: flex;
   gap: 8px;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin-bottom: 3rem;
   max-width: 328px;
-  margin: 0 auto;
+  margin: 0 auto 8px;
 }
 .listen-item {
   display: flex;
@@ -292,8 +295,10 @@
   }
   .section-listen-container {
     justify-content: flex-start;
-    margin-bottom: 5rem;
-    max-width: 100%;
+    margin: 0 0 5rem;
+    width: 100%;
+    max-width: 457.5px;
+    
   }
   .listen-item {
     max-width: 457.5px;
@@ -460,8 +465,21 @@ a.btn.btn-lg.btn-outline-light.btn-card-pricing {
   border-radius: 16px;
   line-height: normal;
 }
+.accordion-button:after {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231E2024"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231E2024"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
+}
+.accordion-button:after, .accordion-button:not(.collapsed)::after {
+  height: 1.5rem;
+  width: 1.5rem;
+  max-width: 1.5rem;
+  background-size: 1.5rem;
+}
 .accordion-button:not(.collapsed) {
   box-shadow: none;
+  color: var(--bs-body-color);
 }
 .accordion-button:focus {
   box-shadow: 0 0 0 0.25rem #081957;
