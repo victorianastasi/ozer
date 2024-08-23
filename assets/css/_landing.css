@@ -114,7 +114,7 @@
   flex-direction: column-reverse;
   max-width: 328px;
   margin: 0 auto;
-  gap: 32px;
+  gap: 30px;
 }
 .section-home .home .home-text {
   display: flex;
@@ -146,16 +146,19 @@
   }
   .section-home .home .home-text {
     max-width: 447px;
+    max-width: 450px;
     margin-top: 1.5rem;
   }
   .section-home .home .home-text .home-text_title {
     font-size: 44px;
+    line-height: 53px;
   }
   .section-home .home .home-text .btn {
     width: fit-content;
   }
   .section-home .home .home-img img {
     width: 447px;
+    max-width: 450px;
   }
 }
 /* SECCION BENEFITS */
